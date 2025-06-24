@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { SectionButton } from './SectionButton';
 import { useNavigationStore } from '../store/navigation';
 import type { FloorSpec } from '../content';
+import { BackButton } from './BackButton';
 
 interface Props {
     sectionId: string;
@@ -24,22 +25,7 @@ export const CategoryMenu: FC<Props> = ({ sectionId, categories, onBack }) => {
                 alignItems: 'center',
             }}
         >
-            {/* back arrow */}
-            <button
-                onClick={onBack}
-                style={{
-                    position: 'absolute',
-                    top: 24,
-                    left: 24,
-                    border: 'none',
-                    background: 'transparent',
-                    fontSize: 32,
-                    cursor: 'pointer',
-                    color: '#5a1e1b',
-                }}
-            >
-                ◀
-            </button>
+            <BackButton onClick={onBack} />
 
             {/* three category buttons */}
             <div style={{ display: 'flex', gap: 120 }}>
