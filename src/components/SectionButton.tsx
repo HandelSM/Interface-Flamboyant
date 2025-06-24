@@ -26,7 +26,7 @@ export const SectionButton: FC<Props> = ({ label, onClick }) => (
             style={{
                 marginTop: 8,
                 fontFamily: 'Montserrat, sans-serif',
-                fontSize: 28,
+                fontSize: 26,
                 letterSpacing: 1,
                 color: '#5a1e1b',
             }}

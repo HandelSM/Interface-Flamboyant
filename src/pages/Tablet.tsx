@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { useNavigationStore } from '../store/navigation';
 import { CONTENT } from '../content';
 import { HomeMenu } from '../components/HomeMenu';
+import { CategoryMenu } from '../components/CategoryMenu';
 import { FloorPlan } from '../components/FloorPlan';
 
 /* ---- PLACEHOLDERS só para compilar ---- */
@@ -47,17 +48,10 @@ export const Tablet: FC = () => {
     /* --------- NÍVEL 2 – escolha de categoria -------- */
     if (!category)
         return (
-            <Menu
-                items={cats.map((c) => c.id)}
-                onSelect={(c) => {
-                    const catData = cats.find((x) => x.id === c)!;
-                    setNav({
-                        category: c,
-                        floor: catData.floors[0].id,   // ← usa o PRIMEIRO floor
-                        hotspot: null,
-                    });
-                }}
-                onBack={() => setNav({ section: null })}
+            <CategoryMenu
+                sectionId={section}
+                categories={cats}
+                onBack={() => setNav({ section: null, category: null, floor: null, hotspot: null })}
             />
         );
 

@@ -87,7 +87,14 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                 },
             ],
         },
-        /* …Áreas Comuns, Apartamentos… */
+        {
+            id: "Áreas Comuns",
+            floors:[]
+        },
+        {
+            id: "Apartamentos",
+            floors:[]
+        }
     ],
   
     Autentico: [/* … */],
