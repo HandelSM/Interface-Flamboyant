@@ -98,7 +98,63 @@ export const CONTENT: Record<string, CategorySpec[]> = {
         },
         {
             id: "Áreas Comuns",
-            floors:[]
+            floors:
+            [
+                {
+                    id: 'Lazer Comum',
+                    planImage: 'public/assets/Imagens Finais/Legítimo/Áreas comuns - Lazer Comum/Planta 1º Pavimento.jpg',
+                    hotspots: [
+                        {
+                            id: 'Mini Mercado',
+                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
+                            media: 'public/assets/Imagens Finais/Legítimo/Áreas comuns - Lazer Comum/Mini Mercado.jpg',
+                        },
+                        {
+                            id: 'Churrasqueira',
+                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
+                            media: 'public/assets/Imagens Finais/Legítimo/Áreas comuns - Lazer Comum/Churrasqueira.jpg',
+                        },
+                        {
+                            id: 'Playground',
+                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
+                            media: 'public/assets/Imagens Finais/Legítimo/Áreas comuns - Lazer Comum/Playground.jpg',
+                        },
+                        {
+                            id: 'Piscina Infantil',
+                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
+                            media: 'public/assets/Imagens Finais/Legítimo/Áreas comuns - Lazer Comum/Piscina Infantil.jpg',
+                        },
+                        {
+                            id: 'Espaço Pet',
+                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
+                            media: 'public/assets/Imagens Finais/Legítimo/Áreas comuns - Lazer Comum/Espaço Pet.jpg',
+                        },
+                    ],
+                    arrows: { right: 'Lazer Exclusivo' },
+                },
+                {
+                    id: 'Lazer Exclusivo',
+                    planImage: 'public/assets/Imagens Finais/Legítimo/Áreas Comuns Exclusivas Legítimo/1º Pavimento - Lazer/Pavimento Lazer - 1º Pavimento.jpg',
+                    hotspots: [
+                        {
+                            id: 'Salão de Festas',
+                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
+                            media: 'public/assets/Imagens Finais/Legítimo/Áreas Comuns Exclusivas Legítimo/1º Pavimento - Lazer/Salão de Festas 1º pavimento.jpg',
+                        },
+                        {
+                            id: 'Brinquedoteca',
+                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
+                            media: 'public/assets/Imagens Finais/Legítimo/Áreas Comuns Exclusivas Legítimo/1º Pavimento - Lazer/Brinquedoteca.jpg',
+                        },
+                        {
+                            id: 'Piscina Adulto',
+                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
+                            media: 'public/assets/Imagens Finais/Legítimo/Áreas Comuns Exclusivas Legítimo/1º Pavimento - Lazer/Piscina.jpg',
+                        }
+                    ],
+                    arrows: { left: 'Lazer Comum', up: "2" },
+                },
+            ]
         },
         {
             id: "Apartamentos",
