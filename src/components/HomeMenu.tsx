@@ -35,6 +35,12 @@ export const HomeMenu: FC = () => {
                     setNav({ section: 'LeClubLacoste', category: null, floor: null, hotspot: null })
                 }
             />
+            <SectionButton
+                label="FACHADA"
+                onClick={() =>
+                    setNav({ section: 'Fachada', category: null, floor: null, hotspot: null })
+                }
+            />
         </div>
     );
 };

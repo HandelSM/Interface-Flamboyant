@@ -60,19 +60,28 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                     planImage: 'public/assets/Imagens Finais/Legítimo/Subsolos/SS1/Planta SS1.jpg',
                     hotspots: [
                         {
-                            id: 'Car Wash',
-                            svgPath: 'M20 200 L100 200 L100 260 L20 260 Z',
-                            media: 'public/assets/Imagens Finais/Legítimo/Subsolos/SS1/Car Wash.jpg',
+                            id: 'Garagem',
+                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
+                            media: 'public/assets/Imagens Finais/Legítimo/Subsolos/SS2/Imagem Garagem.jpg',
                         },
                         {
                             id: 'Lobby Legítimo',
                             svgPath: 'M130 220 L200 220 L200 280 L130 280 Z',
                             media: 'public/assets/Imagens Finais/Legítimo/Subsolos/SS1/Lobby Legítimo/Lobby.jpg',
                         },
+                        {
+                            id: 'Car Wash',
+                            svgPath: 'M20 200 L100 200 L100 260 L20 260 Z',
+                            media: 'public/assets/Imagens Finais/Legítimo/Subsolos/SS1/Car Wash.jpg',
+                        },
+                        {
+                            id: 'Port Cochere',
+                            svgPath: 'M130 220 L200 220 L200 280 L130 280 Z',
+                            media: 'public/assets/Imagens Finais/Legítimo/Subsolos/SS1/Lobby Legítimo/Lobby.jpg',
+                        }
                     ],
                     arrows: { up: 'Térreo', down: 'SS2' },
                 },
-
                 {
                     id: 'Térreo',
                     planImage: 'public/assets/Imagens Finais/Legítimo/Subsolos/Térreo/Planta Térreo.jpg',
@@ -80,7 +89,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                         {
                             id: 'Bicicletário',
                             svgPath: 'M20 200 L100 200 L100 260 L20 260 Z',
-                            media: 'public/assets/Imagens Finais/Legítimo/Subsolos/Térreo/Planta Térreo.jpg',
+                            media: 'public/assets/Imagens Finais/Legítimo/Subsolos/Térreo/Bicicletário.jpg',
                         }
                     ],
                     arrows: { down: 'SS1' },
@@ -99,5 +108,6 @@ export const CONTENT: Record<string, CategorySpec[]> = {
   
     Autentico: [/* … */],
     LeClubLacoste: [/* … */],
+    Fachada: []
   };
   
