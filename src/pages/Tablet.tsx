@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { useNavigationStore } from '../store/navigation';
 import { CONTENT } from '../content';
+import { HomeMenu } from '../components/HomeMenu';
 import { FloorPlan } from '../components/FloorPlan';
 
 /* ---- PLACEHOLDERS só para compilar ---- */
@@ -39,14 +40,7 @@ export const Tablet: FC = () => {
 
     /* --------- NÍVEL 1 – escolha de seção -------- */
     if (!section)
-        return (
-            <Menu
-                items={['Legitimo', 'Autentico', 'LeClubLacoste']}
-                onSelect={(s) =>
-                    setNav({ section: s, category: null, floor: null, hotspot: null })
-                }
-            />
-        );
+        return <HomeMenu />;
 
     const cats = CONTENT[section];
 
