@@ -4,6 +4,7 @@ import { CONTENT } from '../content';
 import { HomeMenu } from '../components/HomeMenu';
 import { CategoryMenu } from '../components/CategoryMenu';
 import { FloorPlan } from '../components/FloorPlan';
+import { FloorScreen } from '../components/FloorScreen';
 
 /* ---- PLACEHOLDERS só para compilar ---- */
 const Menu: FC<{ items: string[]; onSelect: (s: string) => void; onBack?: () => void }> =
@@ -22,19 +23,19 @@ const ButtonDown: FC<React.ComponentProps<'button'>> = (p) => <button {...p}>▼
 const ButtonLeft: FC<React.ComponentProps<'button'>> = (p) => <button {...p}>◀</button>;
 /* --------------------------------------- */
 
-interface ArrowNavProps { arrows: { up?: string; right?: string; down?: string; left?: string }; }
+// interface ArrowNavProps { arrows: { up?: string; right?: string; down?: string; left?: string }; }
 
-const ArrowNav: FC<ArrowNavProps> = ({ arrows }) => {
-    const { setNav } = useNavigationStore();
-    return (
-        <>
-            {arrows.up    && <ButtonUp    onClick={() => setNav({ floor: arrows.up, hotspot: null })}    />}
-            {arrows.right && <ButtonRight onClick={() => setNav({ floor: arrows.right, hotspot: null })} />}
-            {arrows.down  && <ButtonDown  onClick={() => setNav({ floor: arrows.down, hotspot: null })}  />}
-            {arrows.left  && <ButtonLeft  onClick={() => setNav({ floor: arrows.left, hotspot: null })}  />}
-        </>
-    );
-};
+// const ArrowNav: FC<ArrowNavProps> = ({ arrows }) => {
+//     const { setNav } = useNavigationStore();
+//     return (
+//         <>
+//             {arrows.up    && <ButtonUp    onClick={() => setNav({ floor: arrows.up, hotspot: null })}    />}
+//             {arrows.right && <ButtonRight onClick={() => setNav({ floor: arrows.right, hotspot: null })} />}
+//             {arrows.down  && <ButtonDown  onClick={() => setNav({ floor: arrows.down, hotspot: null })}  />}
+//             {arrows.left  && <ButtonLeft  onClick={() => setNav({ floor: arrows.left, hotspot: null })}  />}
+//         </>
+//     );
+// };
 
 export const Tablet: FC = () => {
     const { section, category, floor, setNav } = useNavigationStore();
@@ -60,18 +61,10 @@ export const Tablet: FC = () => {
     const floorData = cat.floors.find((f) => f.id === floor)!;
 
     return (
-        <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-            {/* cabeçalho simples */}
-            <div style={{ position: 'absolute', top: 8, left: 16, zIndex: 5 }}>
-                <h2 style={{ margin: 0 }}>{floorData.id}</h2>
-            </div>
-
-            {/* planta + hotspots */}
-            <FloorPlan planImage={floorData.planImage} hotspots={floorData.hotspots} />
-
-            {/* setas */}
-            <ArrowNav arrows={floorData.arrows} />
-        </div>
+        <FloorScreen
+            category={cat.id}
+            floor={floorData}
+        />
     );
 };
 
