@@ -57,4 +57,3 @@ export const FloorScreen: FC<Props> = ({ category, floor }) => {
         </div>
     );
 };
-

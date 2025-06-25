@@ -15,12 +15,6 @@ export const FloorPlan: FC<Props> = ({ planImage, hotspots }) => {
             <img
                 src={planImage}
                 style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                style={{
-                    width: `calc(100% 40px)`,  // mantém a largura original
-                    height: '100%',
-                    objectFit: 'contain',
-                    transform: `translateX(40px)`,
-                }}
                 alt="floor plan"
             />
 
