@@ -8,11 +8,13 @@ export const FloorHeader: FC<Props> = ({ category }) => (
     <div
         style={{
             width: '100%',
-            padding: '24px 40px 8px',
-            fontFamily: 'Montserrat, sans-serif',
-            fontSize: 32,
+            top: 'calc(20px * var(--ui-scale))',
+            left: 'calc(65px * var(--ui-scale))',
+            fontFamily: 'Utile, sans-serif',
+            fontSize: 'var(--font-big)',
             color: '#5a1e1b',
             position: 'relative',
+            zIndex: 9
         }}
     >
         {category}
@@ -20,8 +22,8 @@ export const FloorHeader: FC<Props> = ({ category }) => (
             style={{
                 position: 'absolute',
                 bottom: 0,
-                left: 40,
-                right: 40,
+                left: 'calc(-40px * var(--ui-scale))',
+                right: 'calc(100px * var(--ui-scale))',
                 height: 2,
                 background: '#5a1e1b',
             }}

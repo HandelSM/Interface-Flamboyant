@@ -35,29 +35,10 @@ export const FloorPlan: FC<Props> = ({ planImage, hotspots }) => {
                         d={h.svgPath}
                         fill="none"
                         stroke={h.id === active ? 'red' : 'transparent'}
-                        clipPath={`path('${h.svgPath}')`}
                         strokeWidth={3}
                     />
                 ))}
             </svg>
-
-            {/* invisible click targets */}
-            {hotspots.map((h) => (
-                <button
-                    key={h.id}
-                    style={{
-                        position: 'absolute',
-                        inset: 0,
-                        transformOrigin: '0 0',
-                        transform: 'scale(1)',
-                        clipPath: `path('${h.svgPath}')`,
-                        background: 'transparent',
-                        border: 'none',
-                        cursor: 'pointer',
-                    }}
-                    onClick={() => setNav({ hotspot: h.id })}
-                />
-            ))}
         </div>
     );
 };

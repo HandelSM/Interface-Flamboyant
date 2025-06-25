@@ -16,7 +16,7 @@ export const HotspotList: FC<Props> = ({ hotspots }) => {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',    // centers vertically
-                paddingLeft: 40,
+                paddingLeft: 'calc(40px * var(--ui-scale-floor))',
             }}
         >
             <ul
@@ -24,7 +24,7 @@ export const HotspotList: FC<Props> = ({ hotspots }) => {
                     listStyle: 'none',
                     margin: 0,
                     padding: 0,
-                    width: 220,
+                    width: 500,
                 }}
             >
                 {hotspots.map((h) => (
@@ -36,6 +36,7 @@ export const HotspotList: FC<Props> = ({ hotspots }) => {
                             cursor: 'pointer',
                             opacity: h.id === active ? 1 : 0.4,
                             fontWeight: h.id === active ? 700 : 300,
+                            fontSize: 'var(--font-med)'
                         }}
                     >
                         {h.id}

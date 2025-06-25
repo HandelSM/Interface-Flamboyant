@@ -20,13 +20,17 @@ export const SectionButton: FC<Props> = ({ label, onClick }) => (
         <img
             src="/assets/Imagens Finais/logo.png"
             alt=""
-            style={{ width: 200, height: 200, objectFit: 'contain' }}
+            style= {{
+                width: `calc(200px * var(--ui-scale))`,
+                height: `calc(200px * var(--ui-scale))`,
+                objectFit: 'contain',
+            }}
+            
         />
         <span
             style={{
-                marginTop: 8,
-                fontFamily: 'Montserrat, sans-serif',
-                fontSize: 26,
+                marginTop: 'calc(8px * var(--ui-scale))',
+                fontSize: 'var(--font-med)',
                 letterSpacing: 1,
                 color: '#5a1e1b',
             }}

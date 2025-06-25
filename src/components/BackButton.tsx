@@ -5,14 +5,14 @@ interface Props {
     size?: number;
 }
 
-export const BackButton: FC<Props> = ({ onClick, size = 40 }) => (
+export const BackButton: FC<Props> = ({ onClick, size = 50 }) => (
     <button
         onClick={onClick}
         style={{
             position: 'absolute',
-            bottom: 24,
-            right: 24,
-            zIndex: 10,              /* ← garante prioridade nos cliques */
+            bottom: 100,
+            right: 140,
+            zIndex: 10,
             border: 'none',
             background: 'transparent',
             fontSize: size,
@@ -21,6 +21,6 @@ export const BackButton: FC<Props> = ({ onClick, size = 40 }) => (
             cursor: 'pointer',
         }}
     >
-        ◀
+        ◀ Voltar
     </button>
 );

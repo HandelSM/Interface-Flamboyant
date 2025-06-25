@@ -29,8 +29,8 @@ const ArrowBtn: FC<{ symbol: string; size: number; onClick: () => void }> = ({
 export const ArrowRail: FC<Props> = ({ arrows, floorId }) => {
   const { setNav } = useNavigationStore();
 
-  const vSize = 56; // ▲ ▼
-  const hSize = 48; // ◀ ▶
+  const vSize = 64 * 1.8; // ▲ ▼
+  const hSize = 48 * 1.8; // ◀ ▶
 
   return (
     <div
@@ -64,7 +64,7 @@ export const ArrowRail: FC<Props> = ({ arrows, floorId }) => {
           />
         )}
 
-        <span style={{ fontSize: 36, fontWeight: 700, whiteSpace: 'nowrap' }}>
+        <span style={{ fontSize: 'var(--font-med)', fontWeight: 700, whiteSpace: 'nowrap' }}>
           {floorId}
         </span>
 

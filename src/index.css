@@ -26,6 +26,15 @@ html, body, #root {
   -webkit-font-smoothing: antialiased;
 }
 
+:root {
+  --ui-scale: 2;          /* 1.0 = 100 %; ajuste livremente */
+  --ui-scale-floor: 3;
+  --space: calc(24px * var(--ui-scale));
+  --font-big: calc(36px * var(--ui-scale));
+  --font-med: calc(26px * var(--ui-scale));
+  --font-small: calc(18px * var(--ui-scale));
+}
+
 /* Remove herança de estilos default dos templates */
 a, button {
   font-family: inherit;

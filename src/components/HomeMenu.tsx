@@ -5,7 +5,6 @@ import { useNavigationStore } from '../store/navigation';
 export const HomeMenu: FC = () => {
     const { setNav } = useNavigationStore();
 
-    /* ①  container ocupa viewport inteira */
     return (
         <div
             style={{
@@ -17,13 +16,12 @@ export const HomeMenu: FC = () => {
                 alignItems: 'center',
             }}
         >
-            {/* ②  flow horizontal das seções */}
             <div style={{ display: 'flex', gap: 160 }}>
                 {[
                     { label: 'LEGÍTIMO', id: 'Legitimo' },
                     { label: 'AUTÊNTICO', id: 'Autentico' },
                     { label: 'LE CLUB LACOSTE', id: 'LeClubLacoste' },
-                    { label: 'FACHADA', id: 'Fachada' },           // NOVO
+                    { label: 'FACHADA', id: 'Fachada' },
                 ].map((sec) => (
                     <SectionButton
                         key={sec.id}
