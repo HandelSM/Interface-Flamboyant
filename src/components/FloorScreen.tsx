@@ -30,7 +30,7 @@ export const FloorScreen: FC<Props> = ({ category, floor }) => {
             <div
                 style={{
                     display: 'grid',
-                    gridTemplateColumns: '260px 1fr 200px',
+                    gridTemplateColumns: '360px 1fr 600px',
                     height: 'calc(100vh - 68px)', // 68 = altura aprox. do header
                 }}
             >
