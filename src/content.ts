@@ -2,95 +2,616 @@
 
 
 export interface HotspotSpec {
-    id: string;          // 'Car Wash'
-    svgPath: string;     // string "M10 20 L30 20 …" (SVG path)  ← continua string
-    media: string;       // pode ser JPG *ou* MP4
+    id: string;
+    svgPath: string;
+    media: string;
 }
 
 export interface FloorSpec {
-    id: string;              // 'SS1'
-    planImage: string;       // JPG/PNG da planta
+    id: string;
+    planImage: string;
     hotspots: HotspotSpec[];
-    arrows: {                // define vizinhos
-      up?: string;
-      right?: string;
-      down?: string;
-      left?: string;
-    };
+    arrows: { up?: string; right?: string; down?: string; left?: string };
 }
 
 export interface CategorySpec {
-    id: string;                  // 'Subsolos'
+    id: string;
     floors: FloorSpec[];
 }
 
 export const CONTENT: Record<string, CategorySpec[]> = {
-    Legitimo: [
+    Legitimo: 
+    [
+        /* --------------------------------------------------------------------
+           SUBSOLOS
+        -------------------------------------------------------------------- */
         {
             id: 'Subsolos',
             floors: [
                 {
                     id: 'SS3',
-                    planImage: 'public/assets/Imagens Finais/Legítimo/Subsolos/SS3/Planta SS3.jpg',
+                    planImage:
+                        '/assets/Imagens Finais/Legitimo/Subsolos/SS3/Planta SS3_c.jpg',
                     hotspots: [
-                    {
-                        id: 'Garagem',
-                        svgPath: 'M50 80 L180 80 L180 140 L50 140 Z',
-                        media: 'public/assets/Imagens Finais/Legítimo/Subsolos/SS3/Imagem Garagem.jpg',
-                    },
+                        {
+                            id: 'Garagem',
+                            svgPath: 'M50 80 L180 80 L180 140 L50 140 Z',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Subsolos/SS3/Imagem Garagem_c.jpg',
+                        },
                     ],
                     arrows: { up: 'SS2' },
                 },
 
                 {
                     id: 'SS2',
-                    planImage: 'public/assets/Imagens Finais/Legítimo/Subsolos/SS2/C18_PB_02_Pavimento_garagem_SS2_EF.jpg',
+                    planImage:
+                        '/assets/Imagens Finais/Legitimo/Subsolos/SS2/C18_PB_02_Pavimento_garagem_SS2_EF_c.jpg',
                     hotspots: [
                         {
                             id: 'Garagem',
                             svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
-                            media: 'public/assets/Imagens Finais/Legítimo/Subsolos/SS2/Imagem Garagem.jpg',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Subsolos/SS2/Imagem Garagem_c.jpg',
                         },
                     ],
                     arrows: { up: 'SS1', down: 'SS3' },
                 },
-        
+
                 {
                     id: 'SS1',
-                    planImage: 'public/assets/Imagens Finais/Legítimo/Subsolos/SS1/Planta SS1.jpg',
+                    planImage:
+                        '/assets/Imagens Finais/Legitimo/Subsolos/SS1/Planta SS1.jpg',
                     hotspots: [
                         {
-                            id: 'Car Wash',
-                            svgPath: 'M20 200 L100 200 L100 260 L20 260 Z',
-                            media: 'public/assets/Imagens Finais/Legítimo/Subsolos/SS1/Car Wash.jpg',
+                            id: 'Garagem',
+                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Subsolos/SS1/Imagem Garagem_c.jpg',
                         },
                         {
                             id: 'Lobby Legítimo',
                             svgPath: 'M130 220 L200 220 L200 280 L130 280 Z',
-                            media: 'public/assets/Imagens Finais/Legítimo/Subsolos/SS1/Lobby Legítimo/Lobby.jpg',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Subsolos/SS1/Lobby Legítimo/Lobby_c.jpg'
+                        },
+                        {
+                            id: 'Car Wash',
+                            svgPath: 'M20 200 L100 200 L100 260 L20 260 Z',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Subsolos/SS1/Car Wash_c.jpg',
+                        },
+                        {
+                            id: 'Port Cochere',
+                            svgPath: 'M130 220 L200 220 L200 280 L130 280 Z',
+                            media:
+                                '/assets/Imagens Finais/fachada-legitimo-autentico/C18_07_Embasamento_TN_EF_V2_c.jpg',
                         },
                     ],
-                    arrows: { up: 'Térreo', down: 'SS2' },
+                    arrows: { up: 'Térreo', down: 'SS2' },
                 },
 
                 {
-                    id: 'Térreo',
-                    planImage: 'public/assets/Imagens Finais/Legítimo/Subsolos/Térreo/Planta Térreo.jpg',
+                    id: 'Térreo',
+                    planImage: '/assets/Imagens Finais/Legitimo/Subsolos/Térreo/Planta Térreo_c.jpg',
                     hotspots: [
                         {
-                            id: 'Bicicletário',
+                            id: 'Garagem',
+                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Subsolos/SS1/Imagem Garagem_c.jpg',
+                        },
+                        {
+                            id: 'Bicicletário',
                             svgPath: 'M20 200 L100 200 L100 260 L20 260 Z',
-                            media: 'public/assets/Imagens Finais/Legítimo/Subsolos/Térreo/Planta Térreo.jpg',
-                        }
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Subsolos/Térreo/Bicicletário_c.jpg'
+                        },
                     ],
                     arrows: { down: 'SS1' },
                 },
             ],
         },
-        /* …Áreas Comuns, Apartamentos… */
+
+        /* --------------------------------------------------------------------
+           ÁREAS COMUNS  (exemplo só do 1º pavimento comum e exclusivo)
+        -------------------------------------------------------------------- */
+        {
+            id: 'Áreas Comuns',
+            floors: [
+                {
+                    id: 'Lazer Comum',
+                    planImage:
+                        '/assets/Imagens Finais/Legitimo/Areas-comuns-lazer-comum/Planta 1º Pavimento_c.jpg',
+                    hotspots: [
+                        {
+                            id: 'Mini Mercado',
+                            svgPath: 'M10 10 L20 10 L20 20 L10 20 Z',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Areas-comuns-lazer-comum/Mini Mercado_c.jpg',
+                        },
+                        {
+                            id: 'Churrasqueira',
+                            svgPath: 'M10 30 L20 30 L20 40 L10 40 Z',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Areas-comuns-lazer-comum/Churrasqueira_c.jpg',
+                        },
+                        {
+                            id: 'Playground',
+                            svgPath: 'M10 50 L20 50 L20 60 L10 60 Z',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Areas-comuns-lazer-comum/Playground_c.jpg',
+                        },
+                        {
+                            id: 'Piscina Infantil',
+                            svgPath: 'M10 70 L20 70 L20 80 L10 80 Z',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Areas-comuns-lazer-comum/Piscina Infantil_c.jpg',
+                        },
+                        {
+                            id: 'Espaço Pet',
+                            svgPath: 'M10 90 L20 90 L20 100 L10 100 Z',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Areas-comuns-lazer-comum/Espaço Pet_c.jpg'
+                        },
+                    ],
+                    arrows: { right: 'Lazer Exclusivo' },
+                },
+
+                {
+                    id: 'Lazer Exclusivo',
+                    planImage:
+                        '/assets/Imagens Finais/Legitimo/Areas-comuns-exclusivas-legítimo/1pavimento-lazer/Pavimento Lazer - 1º Pavimento_c.jpg',
+                    hotspots: [
+                        {
+                            id: 'Salão de Festas',
+                            svgPath: 'M30 10 L40 10 L40 20 L30 20 Z',
+                            media: '/assets/Imagens Finais/Legitimo/Areas-comuns-exclusivas-legítimo/1pavimento-lazer/Salão de Festas 1º pavimento_c.jpg',
+                        },
+                        {
+                            id: 'Brinquedoteca',
+                            svgPath: 'M30 30 L40 30 L40 40 L30 40 Z',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Areas-comuns-exclusivas-legítimo/1pavimento-lazer/Brinquedoteca_c.jpg',
+                        },
+                        {
+                            id: 'Piscina Adulto',
+                            svgPath: 'M30 50 L40 50 L40 60 L30 60 Z',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Areas-comuns-exclusivas-legítimo/1pavimento-lazer/Piscina_c.jpg',
+                        },
+                    ],
+                    arrows: { left: 'Lazer Comum', up: '2' },
+                },
+
+                {
+                    id: '2',
+                    planImage:
+                        '/assets/Imagens Finais/Legitimo/Areas-comuns-exclusivas-legítimo/Wellness-mezanino-2-pavimento-lazer/Planta - Mezanino Lazer - Wellness_c.jpg',
+                    hotspots: [
+                        {
+                            id: 'Pilates',
+                            svgPath: 'M50 10 L60 10 L60 20 L50 20 Z',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Areas-comuns-exclusivas-legítimo/Wellness-mezanino-2-pavimento-lazer/Pilates_c.jpg',
+                        },
+                        {
+                            id: 'Sala de Massagem',
+                            svgPath: 'M50 30 L60 30 L60 40 L50 40 Z',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Areas-comuns-exclusivas-legítimo/Wellness-mezanino-2-pavimento-lazer/Sala de Massagem_c.jpg',
+                        },
+                        {
+                            id: 'Sauna Seca',
+                            svgPath: 'M50 50 L60 50 L60 60 L50 60 Z',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Areas-comuns-exclusivas-legítimo/Wellness-mezanino-2-pavimento-lazer/Sauna Seca_c.jpg',
+                        },
+                        {
+                            id: 'Spa',
+                            svgPath: 'M50 70 L60 70 L60 80 L50 80 Z',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Areas-comuns-exclusivas-legítimo/Wellness-mezanino-2-pavimento-lazer/Spa_c.jpg',
+                        },
+                        {
+                            id: 'Espaço Beauty',
+                            svgPath: 'M50 90 L60 90 L60 100 L50 100 Z',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Areas-comuns-exclusivas-legítimo/Wellness-mezanino-2-pavimento-lazer/Espaço Beauty_c.jpg',
+                        },
+                    ],
+                    arrows: { down: 'Lazer Exclusivo', up: '33' },
+                },
+
+                {
+                    id: '33',
+                    planImage: '/assets/Imagens Finais/Legitimo/Areas-comuns-exclusivas-legítimo/Salaode-festas-33-pavimento/Salão de Festas 33º Pavimento - Planta_c.jpg',
+                    hotspots: [
+                        {
+                            id: 'Salão de Festas',
+                            svgPath: 'M50 90 L60 90 L60 100 L50 100 Z',
+                            media: '/assets/Imagens Finais/Legitimo/Areas-comuns-exclusivas-legítimo/Salaode-festas-33-pavimento/Salão de Festas_c.jpg'
+                        },
+                    ],
+                    arrows: { down: '2', up: '34'}
+                },
+
+                {
+                    id: '34',
+                    planImage: '/assets/Imagens Finais/Legitimo/Areas-comuns-exclusivas-legítimo/Academia-34-pavimento/Academia 34º pavimento_c.jpg',
+                    hotspots: [
+                        {
+                            id: 'Academia',
+                            svgPath: 'M50 90 L60 90 L60 100 L50 100 Z',
+                            media: '/assets/Imagens Finais/Legitimo/Areas-comuns-exclusivas-legítimo/Academia-34-pavimento/Academia_c.jpg'
+                        },
+                    ],
+                    arrows: { down: '33'}
+                }
+            ],
+        },
+
+        {
+            id: 'Apartamentos',
+            floors: 
+            [
+                {
+                    id: '420 m²',
+                    planImage: '/assets/Imagens Finais/Legitimo/Apartamento/Plantas/Apartamento 420m²- Opção 3 suítes_c.jpg',
+                    hotspots: [
+                        {
+                            id: 'Varanda',
+                            svgPath: 'M10 10 L20 10 L20 20 L10 20 Z',
+                            media: '/assets/Imagens Finais/Legitimo/Apartamento/Varanda_c.jpg',
+                        },
+                        {
+                            id: 'Living',
+                            svgPath: 'M10 30 L20 30 L20 40 L10 40 Z',
+                            media: '/assets/Imagens Finais/Legitimo/Apartamento/Living_c.jpg',
+                        },
+                        {
+                            id: 'Sala Íntima',
+                            svgPath: 'M10 50 L20 50 L20 60 L10 60 Z',
+                            media: '/assets/Imagens Finais/Legitimo/Apartamento/Sala Íntima_c.jpg',
+                        },
+                        {
+                            id: 'Suíte Master',
+                            svgPath: 'M10 70 L20 70 L20 80 L10 80 Z',
+                            media: '/assets/Imagens Finais/Legitimo/Apartamento/Suíte Master_c.jpg',
+                        }
+                    ],
+                    arrows: { right: '420 m²' },
+                },
+                {
+                    id: '420 m²',
+                    planImage: '/assets/Imagens Finais/Legitimo/Apartamento/Plantas/Apartamento Tipo - 4 Suítes - 420m²_c.jpg',
+                    hotspots: [],
+                    arrows: { left: '420 m²', right: '420 m²'},
+                },
+                {
+                    id: '420 m²',
+                    planImage: '/assets/Imagens Finais/Legitimo/Apartamento/Plantas/Apartamento 420²- Opção Cozinha Fechada_c.jpg',
+                    hotspots: [],
+                    arrows: { left: '420 m²', right: '461 m²' },
+                },
+                {
+                    id: '461 m²',
+                    planImage: '/assets/Imagens Finais/Legitimo/Apartamento/Plantas/Apartamento Tipo House - 4 Suítes - 461m²_c.jpg',
+                    hotspots: [],
+                    arrows: { left: '420 m²', right: '872 m²' },
+                },
+                {
+                    id: '872 m²',
+                    planImage: '/assets/Imagens Finais/Legitimo/Apartamento/Plantas/Duplex Inferior_c.jpg',
+                    hotspots: [],
+                    arrows: { left: '461 m²', right: '872 m²' },
+                },
+                {
+                    id: '872 m²',
+                    planImage: '/assets/Imagens Finais/Legitimo/Apartamento/Plantas/Duplex Superior_c.jpg',
+                    hotspots: [],
+                    arrows: { left: '872 m²' },
+                },
+            ],
+        },
     ],
-  
-    Autentico: [/* … */],
-    LeClubLacoste: [/* … */],
-  };
-  
+
+    Autentico: 
+    [
+        /* --------------------------------------------------------------------
+           SUBSOLOS
+        -------------------------------------------------------------------- */
+        {
+            id: 'Subsolos',
+            floors: [
+                {
+                    id: 'SS3',
+                    planImage:
+                        '/assets/Imagens Finais/Autentico/Subsolos/SS3/Planta SS3_c.jpg',
+                    hotspots: [
+                        {
+                            id: 'Garagem',
+                            svgPath: 'M50 80 L180 80 L180 140 L50 140 Z',
+                            media:
+                                '/assets/Imagens Finais/Autentico/Subsolos/SS3/Imagem Garagem_c.jpg',
+                        },
+                    ],
+                    arrows: { up: 'SS2' },
+                },
+
+                {
+                    id: 'SS2',
+                    planImage:
+                        '/assets/Imagens Finais/Autentico/Subsolos/SS2/C18_PB_02_Pavimento_garagem_SS2_EF_c.jpg',
+                    hotspots: [
+                        {
+                            id: 'Garagem',
+                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
+                            media:
+                                '/assets/Imagens Finais/Autentico/Subsolos/SS2/Imagem Garagem_c.jpg',
+                        },
+                    ],
+                    arrows: { up: 'SS1', down: 'SS3' },
+                },
+
+                {
+                    id: 'SS1',
+                    planImage:
+                        '/assets/Imagens Finais/Autentico/Subsolos/SS1/Planta SS1.jpg',
+                    hotspots: [
+                        {
+                            id: 'Garagem',
+                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
+                            media:
+                                '/assets/Imagens Finais/Autentico/Subsolos/SS1/Imagem Garagem_c.jpg',
+                        },
+                        {
+                            id: 'Lobby Autêntico',
+                            svgPath: 'M130 220 L200 220 L200 280 L130 280 Z',
+                            media:
+                                '/assets/Imagens Finais/Autentico/Subsolos/SS1/Lobby Autêntico/Lobby_c.jpg'
+                        },
+                        {
+                            id: 'Car Wash',
+                            svgPath: 'M20 200 L100 200 L100 260 L20 260 Z',
+                            media:
+                                '/assets/Imagens Finais/Autentico/Subsolos/SS1/Car Wash_c.jpg',
+                        },
+                        {
+                            id: 'Port Cochere',
+                            svgPath: 'M130 220 L200 220 L200 280 L130 280 Z',
+                            media: '/assets/Imagens Finais/fachada-legitimo-autentico/C18_07_Embasamento_TN_EF_V2_c.jpg',
+                        },
+                    ],
+                    arrows: { up: 'Térreo', down: 'SS2' },
+                },
+
+                {
+                    id: 'Térreo',
+                    planImage: '/assets/Imagens Finais/Legitimo/Subsolos/Térreo/Planta Térreo_c.jpg',
+                    hotspots: [
+                        {
+                            id: 'Garagem',
+                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
+                            media:
+                                '/assets/Imagens Finais/Autentico/Subsolos/SS1/Imagem Garagem_c.jpg',
+                        },
+                        {
+                            id: 'Bicicletário',
+                            svgPath: 'M20 200 L100 200 L100 260 L20 260 Z',
+                            media:
+                                '/assets/Imagens Finais/Autentico/Subsolos/Térreo/Bicicletário_c.jpg'
+                        },
+                    ],
+                    arrows: { down: 'SS1' },
+                },
+            ],
+        },
+
+        /* --------------------------------------------------------------------
+           ÁREAS COMUNS
+        -------------------------------------------------------------------- */
+        {
+            id: 'Áreas Comuns',
+            floors: [
+                {
+                    id: 'Lazer Comum',
+                    planImage:
+                        '/assets/Imagens Finais/Autentico/Area-comum-lazer-comum/Areas-comuns-1pavimento/Planta 1º Pavimento_c.jpg',
+                    hotspots: [
+                        {
+                            id: 'Mini Mercado',
+                            svgPath: 'M10 10 L20 10 L20 20 L10 20 Z',
+                            media:
+                                '/assets/Imagens Finais/Autentico/Area-comum-lazer-comum/Areas-comuns-1pavimento/Mini Mercado_c.jpg',
+                        },
+                        {
+                            id: 'Churrasqueira',
+                            svgPath: 'M10 30 L20 30 L20 40 L10 40 Z',
+                            media:
+                                '/assets/Imagens Finais/Autentico/Area-comum-lazer-comum/Areas-comuns-1pavimento/Churrasqueira_c.jpg',
+                        },
+                        {
+                            id: 'Playground',
+                            svgPath: 'M10 50 L20 50 L20 60 L10 60 Z',
+                            media:
+                                '/assets/Imagens Finais/Autentico/Area-comum-lazer-comum/Areas-comuns-1pavimento/Playground_c.jpg',
+                        },
+                        {
+                            id: 'Piscina Infantil',
+                            svgPath: 'M10 70 L20 70 L20 80 L10 80 Z',
+                            media:
+                                '/assets/Imagens Finais/Autentico/Area-comum-lazer-comum/Areas-comuns-1pavimento/Piscina Infantil_c.jpg',
+                        },
+                        {
+                            id: 'Espaço Pet',
+                            svgPath: 'M10 90 L20 90 L20 100 L10 100 Z',
+                            media:
+                                '/assets/Imagens Finais/Autentico/Area-comum-lazer-comum/Areas-comuns-1pavimento/Espaço Pet_c.jpg'
+                        },
+                    ],
+                    arrows: { right: 'Lazer Exclusivo' },
+                },
+
+                {
+                    id: 'Lazer Exclusivo',
+                    planImage: '/assets/Imagens Finais/Autentico/Area-comum-lazer-comum/Areas-comuns-1pavimento/Planta 1º Pavimento_c.jpg',
+                    hotspots: [
+                        {
+                            id: 'Salão de Festas Gourmet',
+                            svgPath: 'M30 10 L40 10 L40 20 L30 20 Z',
+                            media: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Lazer-1pavimento-lazer-exclusivo-autentico/Salão de Festas Gourmet/C18_17_Salao_Festas_02_TS_EF_c.jpg',
+                        },
+                        {
+                            id: 'Salão de Festas',
+                            svgPath: 'M30 10 L40 10 L40 20 L30 20 Z',
+                            media: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Lazer-1pavimento-lazer-exclusivo-autentico/Salão de Festas/C18_16_Salao_Festas_TS_EF_c.jpg',
+                        },
+                        {
+                            id: 'Brinquedoteca',
+                            svgPath: 'M30 30 L40 30 L40 40 L30 40 Z',
+                            media: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Lazer-1pavimento-lazer-exclusivo-autentico/Brinquedoteca/C18_18_Brinquedoteca_TS_EF_c.jpg'
+                        },
+                        {
+                            id: 'Piscina Adulto',
+                            svgPath: 'M30 50 L40 50 L40 60 L30 60 Z',
+                            media: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Lazer-1pavimento-lazer-exclusivo-autentico/Piscina/C18_08_Piscina_Adulto_TS_EF2_c.jpg'
+                        },
+                    ],
+                    arrows: { left: 'Lazer Comum', up: '2' },
+                },
+
+                {
+                    id: '2',
+                    planImage:
+                        '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Wellness-mezanino-2-pavimento-lazer/Planta - Mezanino Lazer - Wellness_c.jpg',
+                    hotspots: [
+                        {
+                            id: 'Pilates',
+                            svgPath: 'M50 10 L60 10 L60 20 L50 20 Z',
+                            media:
+                                '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Wellness-mezanino-2-pavimento-lazer/Pilates_c.jpg',
+                        },
+                        {
+                            id: 'Sala de Massagem',
+                            svgPath: 'M50 30 L60 30 L60 40 L50 40 Z',
+                            media:
+                                '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Wellness-mezanino-2-pavimento-lazer/Sala de Massagem_c.jpg',
+                        },
+                        {
+                            id: 'Sauna Seca',
+                            svgPath: 'M50 50 L60 50 L60 60 L50 60 Z',
+                            media:
+                                '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Wellness-mezanino-2-pavimento-lazer/Sauna Seca_c.jpg',
+                        },
+                        {
+                            id: 'Spa',
+                            svgPath: 'M50 70 L60 70 L60 80 L50 80 Z',
+                            media:
+                                '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Wellness-mezanino-2-pavimento-lazer/Spa_c.jpg',
+                        },
+                        {
+                            id: 'Espaço Beauty',
+                            svgPath: 'M50 90 L60 90 L60 100 L50 100 Z',
+                            media:
+                                '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Wellness-mezanino-2-pavimento-lazer/Espaço Beauty_c.jpg',
+                        },
+                    ],
+                    arrows: { down: 'Lazer Exclusivo', up: '33' },
+                },
+
+                {
+                    id: '33',
+                    planImage: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Salaode-festas-33-pavimento/Salão de Festas 33º Pavimento - Planta_c.jpg',
+                    hotspots: [
+                        {
+                            id: 'Salão de Festas',
+                            svgPath: 'M50 90 L60 90 L60 100 L50 100 Z',
+                            media: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Salaode-festas-33-pavimento/Salão de Festas_c.jpg'
+                        },
+                    ],
+                    arrows: { down: '2', up: '34'}
+                },
+
+                {
+                    id: '34',
+                    planImage: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Academia-34-pavimento/Academia 34º pavimento_c.jpg',
+                    hotspots: [
+                        {
+                            id: 'Academia',
+                            svgPath: 'M50 90 L60 90 L60 100 L50 100 Z',
+                            media: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Academia-34-pavimento/Academia_c.jpg'
+                        },
+                    ],
+                    arrows: { down: '33'}
+                }
+            ],
+        },
+
+        {
+            id: 'Apartamentos',
+            floors: 
+            [
+                {
+                    id: '420 m²',
+                    planImage: '/assets/Imagens Finais/Autentico/Apartamento/Plantas/Apartamento 420m²- Opção 3 suítes_c.jpg',
+                    hotspots: [
+                        {
+                            id: 'Varanda',
+                            svgPath: 'M10 10 L20 10 L20 20 L10 20 Z',
+                            media: '/assets/Imagens Finais/Autentico/Apartamento/Varanda_c.jpg',
+                        },
+                        {
+                            id: 'Living',
+                            svgPath: 'M10 30 L20 30 L20 40 L10 40 Z',
+                            media: '/assets/Imagens Finais/Autentico/Apartamento/Living_c.jpg',
+                        },
+                        {
+                            id: 'Sala Íntima',
+                            svgPath: 'M10 50 L20 50 L20 60 L10 60 Z',
+                            media: '/assets/Imagens Finais/Autentico/Apartamento/Sala Íntima_c.jpg',
+                        },
+                        {
+                            id: 'Suíte Master',
+                            svgPath: 'M10 70 L20 70 L20 80 L10 80 Z',
+                            media: '/assets/Imagens Finais/Autentico/Apartamento/Suíte Master_c.jpg',
+                        }
+                    ],
+                    arrows: { right: '420 m²' },
+                },
+                {
+                    id: '420 m²',
+                    planImage: '/assets/Imagens Finais/Autentico/Apartamento/Plantas/Apartamento Tipo - 4 Suítes - 420m²_c.jpg',
+                    hotspots: [],
+                    arrows: { left: '420 m²', right: '420 m²'},
+                },
+                {
+                    id: '420 m²',
+                    planImage: '/assets/Imagens Finais/Autentico/Apartamento/Plantas/Apartamento 420²- Opção Cozinha Fechada_c.jpg',
+                    hotspots: [],
+                    arrows: { left: '420 m²', right: '461 m²' },
+                },
+                {
+                    id: '461 m²',
+                    planImage: '/assets/Imagens Finais/Autentico/Apartamento/Plantas/Apartamento Tipo House - 4 Suítes - 461m²_c.jpg',
+                    hotspots: [],
+                    arrows: { left: '420 m²', right: '872 m²' },
+                },
+                {
+                    id: '872 m²',
+                    planImage: '/assets/Imagens Finais/Autentico/Apartamento/Plantas/Duplex Inferior_c.jpg',
+                    hotspots: [],
+                    arrows: { left: '461 m²', right: '872 m²' },
+                },
+                {
+                    id: '872 m²',
+                    planImage: '/assets/Imagens Finais/Autentico/Apartamento/Plantas/Duplex Superior_c.jpg',
+                    hotspots: [],
+                    arrows: { left: '872 m²' },
+                },
+            ],
+        },
+    ],
+    LeClubLacoste: [],
+    Fachada: []
+};
