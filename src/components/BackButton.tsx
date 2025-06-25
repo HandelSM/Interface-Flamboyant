@@ -10,8 +10,8 @@ export const BackButton: FC<Props> = ({ onClick, size = 32 }) => (
         onClick={onClick}
         style={{
             position: 'absolute',
-            top: 24,
-            left: 24,
+            bottom: 24,
+            right: 24,
             border: 'none',
             background: 'transparent',
             fontSize: size,
@@ -23,3 +23,4 @@ export const BackButton: FC<Props> = ({ onClick, size = 32 }) => (
         ◀
     </button>
 );
+

@@ -13,7 +13,6 @@ interface Props {
 }
 
 export const FloorScreen: FC<Props> = ({ category, floor }) => {
-    /* precisamos do hook aqui dentro */
     const { setNav } = useNavigationStore();
 
     return (
@@ -21,27 +20,41 @@ export const FloorScreen: FC<Props> = ({ category, floor }) => {
             style={{
                 width: '100%',
                 height: '100%',
-                display: 'flex',
-                flexDirection: 'column',
+                position: 'relative',
+                background: '#fff',
             }}
         >
-            <FloorHeader category={category} />
+            <FloorHeader category={category} /> {/* header volta */}
 
-            {/* botão voltar para o menu de categorias */}
-            <BackButton onClick={() => setNav({ category: null, floor: null, hotspot: null })} />
-
-            <div style={{ flex: 1, display: 'flex' }}>
-                {/* lista de hotspots à esquerda */}
+            {/* grid */}
+            <div
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: '260px 1fr 200px',
+                    height: 'calc(100vh - 68px)', // 68 = altura aprox. do header
+                }}
+            >
                 <HotspotList hotspots={floor.hotspots} />
-
-                {/* planta ao centro */}
-                <div style={{ flex: 1, position: 'relative' }}>
-                    <FloorPlan planImage={floor.planImage} hotspots={floor.hotspots} />
+                <div style={{ position: 'relative', overflow: 'hidden' }}>
+                    <FloorPlan
+                        planImage={floor.planImage}
+                        hotspots={floor.hotspots}
+                    />
                 </div>
-
-                {/* setas + nome do andar à direita */}
                 <ArrowRail arrows={floor.arrows} floorId={floor.id} />
             </div>
+
+            {/* botão voltar */}
+            <BackButton
+                onClick={() =>
+                    setNav({
+                        category: null,
+                        floor: null,
+                        hotspot: null,
+                    })
+                }
+            />
         </div>
     );
 };
+

@@ -27,22 +27,52 @@ export const ArrowRail: FC<Props> = ({ arrows, floorId }) => {
     return (
         <div
             style={{
-                width: 240,
+                width: 200,
+                height: '100%',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                padding: 24,
-                fontFamily: 'Montserrat, sans‑serif',
+                justifyContent: 'center',
+                gap: 12,
+                fontFamily: 'Utile, sans-serif',
                 color: '#5a1e1b',
-                fontSize: 28,
             }}
         >
-            {arrows.up && <ArrowBtn onClick={() => setNav({ floor: arrows.up, hotspot: null })} symbol="▲" />}
-            {arrows.right && <ArrowBtn onClick={() => setNav({ floor: arrows.right, hotspot: null })} symbol="▶" />}
-            {arrows.down && <ArrowBtn onClick={() => setNav({ floor: arrows.down, hotspot: null })} symbol="▼" />}
-            {arrows.left && <ArrowBtn onClick={() => setNav({ floor: arrows.left, hotspot: null })} symbol="◀" />}
+            {/* seta up */}
+            {arrows.up && (
+                <ArrowBtn
+                    symbol="▲"
+                    onClick={() => setNav({ floor: arrows.up, hotspot: null })}
+                />
+            )}
 
-            <div style={{ marginTop: 32 }}>{floorId}</div>
+            {/* linha nome + setas horizontais */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                {arrows.left && (
+                    <ArrowBtn
+                        symbol="◀"
+                        onClick={() => setNav({ floor: arrows.left, hotspot: null })}
+                    />
+                )}
+
+                <span style={{ fontWeight: 700, whiteSpace: 'nowrap' }}>{floorId}</span>
+
+                {arrows.right && (
+                    <ArrowBtn
+                        symbol="▶"
+                        onClick={() => setNav({ floor: arrows.right, hotspot: null })}
+                    />
+                )}
+            </div>
+
+            {/* seta down */}
+            {arrows.down && (
+                <ArrowBtn
+                    symbol="▼"
+                    onClick={() => setNav({ floor: arrows.down, hotspot: null })}
+                />
+            )}
         </div>
     );
 };
+

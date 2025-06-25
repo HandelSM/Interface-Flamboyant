@@ -5,42 +5,40 @@ import { useNavigationStore } from '../store/navigation';
 export const HomeMenu: FC = () => {
     const { setNav } = useNavigationStore();
 
+    /* ①  container ocupa viewport inteira */
     return (
         <div
             style={{
+                width: '100vw',
+                height: '100vh',
+                background: '#ffffff',
                 display: 'flex',
                 justifyContent: 'center',
-                gap: 120,
-                width: '100%',
-                height: '100%',
                 alignItems: 'center',
-                background: '#ffffff',
             }}
         >
-            <SectionButton
-                label="LEGÍTIMO"
-                onClick={() =>
-                    setNav({ section: 'Legitimo', category: null, floor: null, hotspot: null })
-                }
-            />
-            <SectionButton
-                label="AUTÊNTICO"
-                onClick={() =>
-                    setNav({ section: 'Autentico', category: null, floor: null, hotspot: null })
-                }
-            />
-            <SectionButton
-                label="LE CLUB LACOSTE"
-                onClick={() =>
-                    setNav({ section: 'LeClubLacoste', category: null, floor: null, hotspot: null })
-                }
-            />
-            <SectionButton
-                label="FACHADA"
-                onClick={() =>
-                    setNav({ section: 'Fachada', category: null, floor: null, hotspot: null })
-                }
-            />
+            {/* ②  flow horizontal das seções */}
+            <div style={{ display: 'flex', gap: 160 }}>
+                {[
+                    { label: 'LEGÍTIMO', id: 'Legitimo' },
+                    { label: 'AUTÊNTICO', id: 'Autentico' },
+                    { label: 'LE CLUB LACOSTE', id: 'LeClubLacoste' },
+                    { label: 'FACHADA', id: 'Fachada' },           // NOVO
+                ].map((sec) => (
+                    <SectionButton
+                        key={sec.id}
+                        label={sec.label}
+                        onClick={() =>
+                            setNav({
+                                section: sec.id,
+                                category: null,
+                                floor: null,
+                                hotspot: null,
+                            })
+                        }
+                    />
+                ))}
+            </div>
         </div>
     );
 };
