@@ -16,7 +16,8 @@ export const HotspotList: FC<Props> = ({ hotspots }) => {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',    // centers vertically
-                paddingLeft: 'calc(40px * var(--ui-scale-floor))',
+                paddingLeft: 'calc(20px * var(--ui-scale-floor))',
+                zIndex: 9
             }}
         >
             <ul
@@ -24,7 +25,7 @@ export const HotspotList: FC<Props> = ({ hotspots }) => {
                     listStyle: 'none',
                     margin: 0,
                     padding: 0,
-                    width: 500,
+                    width: 630,
                 }}
             >
                 {hotspots.map((h) => (

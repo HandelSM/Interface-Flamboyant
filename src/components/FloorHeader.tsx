@@ -9,7 +9,7 @@ export const FloorHeader: FC<Props> = ({ category }) => (
         style={{
             width: '100%',
             top: 'calc(20px * var(--ui-scale))',
-            left: 'calc(65px * var(--ui-scale))',
+            left: 'calc(35px * var(--ui-scale))',
             fontFamily: 'Utile, sans-serif',
             fontSize: 'var(--font-big)',
             color: '#5a1e1b',
@@ -22,7 +22,7 @@ export const FloorHeader: FC<Props> = ({ category }) => (
             style={{
                 position: 'absolute',
                 bottom: 0,
-                left: 'calc(-40px * var(--ui-scale))',
+                left: 'calc(-20px * var(--ui-scale))',
                 right: 'calc(100px * var(--ui-scale))',
                 height: 2,
                 background: '#5a1e1b',

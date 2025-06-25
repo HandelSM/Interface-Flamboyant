@@ -96,6 +96,12 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                     planImage: '/assets/Imagens Finais/Legitimo/Subsolos/Térreo/Planta Térreo_c.jpg',
                     hotspots: [
                         {
+                            id: 'Garagem',
+                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
+                            media:
+                                '/assets/Imagens Finais/Legitimo/Subsolos/SS1/Imagem Garagem_c.jpg',
+                        },
+                        {
                             id: 'Bicicletário',
                             svgPath: 'M20 200 L100 200 L100 260 L20 260 Z',
                             media:
@@ -360,10 +366,10 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                                 '/assets/Imagens Finais/Autentico/Subsolos/SS1/Imagem Garagem_c.jpg',
                         },
                         {
-                            id: 'Lobby Legítimo',
+                            id: 'Lobby Autêntico',
                             svgPath: 'M130 220 L200 220 L200 280 L130 280 Z',
                             media:
-                                '/assets/Imagens Finais/Autentico/Subsolos/SS1/Lobby Legítimo/Lobby_c.jpg'
+                                '/assets/Imagens Finais/Autentico/Subsolos/SS1/Lobby Autêntico/Lobby_c.jpg'
                         },
                         {
                             id: 'Car Wash',
@@ -374,8 +380,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                         {
                             id: 'Port Cochere',
                             svgPath: 'M130 220 L200 220 L200 280 L130 280 Z',
-                            media:
-                                '/assets/Imagens Finais/fachada-autentico-autentico/C18_07_Embasamento_TN_EF_V2_c.jpg',
+                            media: '/assets/Imagens Finais/fachada-legitimo-autentico/C18_07_Embasamento_TN_EF_V2_c.jpg',
                         },
                     ],
                     arrows: { up: 'Térreo', down: 'SS2' },
@@ -383,8 +388,14 @@ export const CONTENT: Record<string, CategorySpec[]> = {
 
                 {
                     id: 'Térreo',
-                    planImage: '/assets/Imagens Finais/Autentico/Subsolos/Térreo/Planta Térreo_c.jpg',
+                    planImage: '/assets/Imagens Finais/Legitimo/Subsolos/Térreo/Planta Térreo_c.jpg',
                     hotspots: [
+                        {
+                            id: 'Garagem',
+                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
+                            media:
+                                '/assets/Imagens Finais/Autentico/Subsolos/SS1/Imagem Garagem_c.jpg',
+                        },
                         {
                             id: 'Bicicletário',
                             svgPath: 'M20 200 L100 200 L100 260 L20 260 Z',
@@ -444,25 +455,27 @@ export const CONTENT: Record<string, CategorySpec[]> = {
 
                 {
                     id: 'Lazer Exclusivo',
-                    planImage:
-                        '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-legítimo/1pavimento-lazer/Pavimento Lazer - 1º Pavimento_c.jpg',
+                    planImage: '/assets/Imagens Finais/Autentico/Area-comum-lazer-comum/Areas-comuns-1pavimento/Planta 1º Pavimento_c.jpg',
                     hotspots: [
+                        {
+                            id: 'Salão de Festas Gourmet',
+                            svgPath: 'M30 10 L40 10 L40 20 L30 20 Z',
+                            media: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Lazer-1pavimento-lazer-exclusivo-autentico/Salão de Festas Gourmet/C18_17_Salao_Festas_02_TS_EF_c.jpg',
+                        },
                         {
                             id: 'Salão de Festas',
                             svgPath: 'M30 10 L40 10 L40 20 L30 20 Z',
-                            media: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-legítimo/1pavimento-lazer/Salão de Festas 1º pavimento_c.jpg',
+                            media: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Lazer-1pavimento-lazer-exclusivo-autentico/Salão de Festas/C18_16_Salao_Festas_TS_EF_c.jpg',
                         },
                         {
                             id: 'Brinquedoteca',
                             svgPath: 'M30 30 L40 30 L40 40 L30 40 Z',
-                            media:
-                                '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-legítimo/1pavimento-lazer/Brinquedoteca_c.jpg',
+                            media: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Lazer-1pavimento-lazer-exclusivo-autentico/Brinquedoteca/C18_18_Brinquedoteca_TS_EF_c.jpg'
                         },
                         {
                             id: 'Piscina Adulto',
                             svgPath: 'M30 50 L40 50 L40 60 L30 60 Z',
-                            media:
-                                '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-legítimo/1pavimento-lazer/Piscina_c.jpg',
+                            media: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Lazer-1pavimento-lazer-exclusivo-autentico/Piscina/C18_08_Piscina_Adulto_TS_EF2_c.jpg'
                         },
                     ],
                     arrows: { left: 'Lazer Comum', up: '2' },
@@ -471,37 +484,37 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                 {
                     id: '2',
                     planImage:
-                        '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-legítimo/Wellness-mezanino-2-pavimento-lazer/Planta - Mezanino Lazer - Wellness_c.jpg',
+                        '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Wellness-mezanino-2-pavimento-lazer/Planta - Mezanino Lazer - Wellness_c.jpg',
                     hotspots: [
                         {
                             id: 'Pilates',
                             svgPath: 'M50 10 L60 10 L60 20 L50 20 Z',
                             media:
-                                '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-legítimo/Wellness-mezanino-2-pavimento-lazer/Pilates_c.jpg',
+                                '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Wellness-mezanino-2-pavimento-lazer/Pilates_c.jpg',
                         },
                         {
                             id: 'Sala de Massagem',
                             svgPath: 'M50 30 L60 30 L60 40 L50 40 Z',
                             media:
-                                '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-legítimo/Wellness-mezanino-2-pavimento-lazer/Sala de Massagem_c.jpg',
+                                '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Wellness-mezanino-2-pavimento-lazer/Sala de Massagem_c.jpg',
                         },
                         {
                             id: 'Sauna Seca',
                             svgPath: 'M50 50 L60 50 L60 60 L50 60 Z',
                             media:
-                                '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-legítimo/Wellness-mezanino-2-pavimento-lazer/Sauna Seca_c.jpg',
+                                '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Wellness-mezanino-2-pavimento-lazer/Sauna Seca_c.jpg',
                         },
                         {
                             id: 'Spa',
                             svgPath: 'M50 70 L60 70 L60 80 L50 80 Z',
                             media:
-                                '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-legítimo/Wellness-mezanino-2-pavimento-lazer/Spa_c.jpg',
+                                '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Wellness-mezanino-2-pavimento-lazer/Spa_c.jpg',
                         },
                         {
                             id: 'Espaço Beauty',
                             svgPath: 'M50 90 L60 90 L60 100 L50 100 Z',
                             media:
-                                '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-legítimo/Wellness-mezanino-2-pavimento-lazer/Espaço Beauty_c.jpg',
+                                '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Wellness-mezanino-2-pavimento-lazer/Espaço Beauty_c.jpg',
                         },
                     ],
                     arrows: { down: 'Lazer Exclusivo', up: '33' },
@@ -509,12 +522,12 @@ export const CONTENT: Record<string, CategorySpec[]> = {
 
                 {
                     id: '33',
-                    planImage: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-legítimo/Salaode-festas-33-pavimento/Salão de Festas 33º Pavimento - Planta_c.jpg',
+                    planImage: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Salaode-festas-33-pavimento/Salão de Festas 33º Pavimento - Planta_c.jpg',
                     hotspots: [
                         {
                             id: 'Salão de Festas',
                             svgPath: 'M50 90 L60 90 L60 100 L50 100 Z',
-                            media: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-legítimo/Salaode-festas-33-pavimento/Salão de Festas_c.jpg'
+                            media: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Salaode-festas-33-pavimento/Salão de Festas_c.jpg'
                         },
                     ],
                     arrows: { down: '2', up: '34'}
@@ -522,12 +535,12 @@ export const CONTENT: Record<string, CategorySpec[]> = {
 
                 {
                     id: '34',
-                    planImage: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-legítimo/Academia-34-pavimento/Academia 34º pavimento_c.jpg',
+                    planImage: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Academia-34-pavimento/Academia 34º pavimento_c.jpg',
                     hotspots: [
                         {
                             id: 'Academia',
                             svgPath: 'M50 90 L60 90 L60 100 L50 100 Z',
-                            media: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-legítimo/Academia-34-pavimento/Academia_c.jpg'
+                            media: '/assets/Imagens Finais/Autentico/Areas-comuns-exclusivas-autentico/Academia-34-pavimento/Academia_c.jpg'
                         },
                     ],
                     arrows: { down: '33'}
