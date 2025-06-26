@@ -187,7 +187,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                 {
                     id: '2',
                     planImage:
-                        '/assets/imagens_finais/legitimo_1/areas-comuns-exclusivas-legitimo/wellness-mezanino-2-pavimento-lazer_1/planta_-_mezanino_lazer_-_wellness_c.jpg',
+                        '/assets/imagens_finais/legitimo_1/areas-comuns-exclusivas-legitimo/wellness-mezanino-2-pavimento-lazer_1/planta_wellness.jpg',
                     hotspots: [
                         {
                             id: 'Pilates',
@@ -225,7 +225,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
 
                 {
                     id: '33',
-                    planImage: '/assets/imagens_finais/legitimo_1/areas-comuns-exclusivas-legitimo/salao-de-festas-33-pavimento_1/salao_de_festas_33o_pavimento_-_planta_c.jpg',
+                    planImage: '/assets/imagens_finais/legitimo_1/areas-comuns-exclusivas-legitimo/salao-de-festas-33-pavimento_1/planta_-_33pavimento.jpg',
                     hotspots: [
                         {
                             id: 'Salão de Festas',
@@ -257,7 +257,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
             [
                 {
                     id: '420 m²',
-                    planImage: '/assets/imagens_finais/legitimo_1/apartamento_1/plantas_1/apartamento_420m2-_opcao_3_suites_c.jpg',
+                    planImage: '/assets/imagens_finais/legitimo_1/apartamento_1/plantas_1/apartamento_420mop_3_suites.jpg',
                     hotspots: [
                         {
                             id: 'Varanda',
@@ -510,6 +510,31 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                             svgPath: 'M50 90 L60 90 L60 100 L50 100 Z',
                             media: '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-1pavimento-wellnes-lazer-exclusivo-autentico_1/sauna_seca/c18_23_sauna_ts_ef_c_1.jpg'
                         },
+                        {
+                            id: 'Sala de Massagem',
+                            svgPath: 'M50 90 L60 90 L60 100 L50 100 Z',
+                            media: '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-1pavimento-wellnes-lazer-exclusivo-autentico_1/sala_de_massagem/c18_21_sala_massagem_ts_ef2_c_1.jpg'
+                        },
+                        {
+                            id: 'Spa',
+                            svgPath: 'M50 90 L60 90 L60 100 L50 100 Z',
+                            media: '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-1pavimento-wellnes-lazer-exclusivo-autentico_1/spa_1/c18_22_wellness_spa_ts_ef_c_1.jpg'
+                        },
+                        {
+                            id: 'Espaço Beauty',
+                            svgPath: 'M50 90 L60 90 L60 100 L50 100 Z',
+                            media: '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-1pavimento-wellnes-lazer-exclusivo-autentico_1/espaco_beauty/c18_26_espaco_beauty_ts_ef2_c_1.jpg'
+                        },
+                        {
+                            id: 'Pilates',
+                            svgPath: 'M50 90 L60 90 L60 100 L50 100 Z',
+                            media: '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-1pavimento-wellnes-lazer-exclusivo-autentico_1/pilates_1/c18_24_wellness_pilates_ts_ef_c_1.jpg'
+                        },
+                        {
+                            id: 'Yoga',
+                            svgPath: 'M50 90 L60 90 L60 100 L50 100 Z',
+                            media: '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-1pavimento-wellnes-lazer-exclusivo-autentico_1/yoga_1/c18_25_wellness_yoga_ts_ef_c_1.jpg'
+                        },
                     ],
                     arrows: { down: '30'}
                 }
@@ -551,7 +576,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                 },
                 {
                     id: '306 m²',
-                    planImage: 'public/assets/imagens_finais/autentico_1/apartamentos_1/apartamento306m_1/plantas_1/apartamento_306m2_-_final_02_-_opcao_03_suites/apartamento_306m2_-_final_02_-_opcao_03_suites_c.jpg',
+                    planImage: '/assets/imagens_finais/autentico_1/apartamentos_1/apartamento306m_1/plantas_1/apartamento_306m-_final_02_-_op03_suites.jpg',
                     hotspots: [
                         {
                             id: 'Suíte Master',
@@ -570,7 +595,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                             media: '/assets/imagens_finais/autentico_1/apartamentos_1/apartamento306m_1/varanda_c_1.jpg',
                         },
                     ],
-                    arrows: { left: '250 m²', right: '306 m²' },
+                    arrows: { left: '274 m²', right: '306 m²' },
                 },
                 {
                     id: '306 m²',
