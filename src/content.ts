@@ -638,6 +638,35 @@ export const CONTENT: Record<string, CategorySpec[]> = {
             ],
         },
     ],
-    LeClubLacoste: [],
+    LeClubLacoste: [
+        {
+            id: 'Quadras',
+            floors: [
+                {
+                    id: 'Lazer Le Club Lacoste',
+                    planImage: '/assets/imagens_finais/le-club-lacoste_1/planta_1pavimento_c.jpg',
+                    hotspots:
+                    [
+                        {
+                            id: 'Quadra de Tênis',
+                            svgPath: 'M10 10 L20 10 L20 20 L10 20 Z',
+                            media: '/assets/imagens_finais/le-club-lacoste_1/quadra_de_tenis_c.jpg',
+                        },
+                        {
+                            id: 'Quadra Esportiva',
+                            svgPath: 'M10 30 L20 30 L20 40 L10 40 Z',
+                            media: '/assets/imagens_finais/le-club-lacoste_1/quadra_esportiva_c.jpg',
+                        },
+                        {
+                            id: 'Quadra de Areia',
+                            svgPath: 'M10 10 L20 10 L20 20 L10 20 Z',
+                            media: '/assets/imagens_finais/le-club-lacoste_1/quadra_de_areia_c.jpg',
+                        },
+                    ],
+                    arrows: {}
+                },
+            ],
+        },
+    ],
     Fachada: []
 };

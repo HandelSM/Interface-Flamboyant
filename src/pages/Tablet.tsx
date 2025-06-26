@@ -46,6 +46,21 @@ export const Tablet: FC = () => {
 
     const cats = CONTENT[section];
 
+    /* --------- ATALHO para Le Club Lacoste -------- */
+    if (section === 'LeClubLacoste' && !category) {
+        // pega a 1ª categoria e 1º floor
+        const firstCat   = cats[0];
+        const firstFloor = firstCat.floors[0];
+
+        // joga direto para o FloorScreen
+        setNav({
+            category: firstCat.id,
+            floor: firstFloor.id,
+            hotspot: null,
+        });
+        return null;               // deixa o re-render cuidar
+    }
+
     /* --------- NÍVEL 2 – escolha de categoria -------- */
     if (!category)
         return (

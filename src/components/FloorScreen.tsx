@@ -13,7 +13,20 @@ interface Props {
 }
 
 export const FloorScreen: FC<Props> = ({ category, floor }) => {
-    const { setNav } = useNavigationStore();
+    const { section, setNav } = useNavigationStore();
+
+    const handleBack = () => {
+        if (section === 'LeClubLacoste')
+        {
+            // volta para a Home (primeira tela)
+            setNav({ section: null, category: null, floor: null, hotspot: null });
+        }
+        else
+        {
+            // fluxo normal: volta para CategoryMenu
+            setNav({ category: null, floor: null, hotspot: null });
+        }
+    };
 
     return (
         <div
@@ -54,6 +67,8 @@ export const FloorScreen: FC<Props> = ({ category, floor }) => {
                     })
                 }
             />
+
+            <BackButton onClick={handleBack} />
         </div>
     );
 };
