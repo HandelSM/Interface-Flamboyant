@@ -10,34 +10,23 @@ interface Props {
 export const FloorPlan: FC<Props> = ({ planImage, hotspots }) => {
     const { hotspot: active, setNav } = useNavigationStore();
 
+    const activeIdx = hotspots.findIndex((h) => h.id === active); // -1 se nenhum
+    const planSrc = (() => {
+        if (activeIdx < 0) return planImage;               // sem highlight
+        const dot = planImage.lastIndexOf('.');            // separa extensão
+        if (dot === -1) return planImage;                  // segurança
+        console.log(`${planImage.slice(0, dot)}_${activeIdx+1}.png`)
+        return `${planImage.slice(0, dot)}_${activeIdx+1}.png`;
+    })();
+
     return (
         <div style={{ position: 'relative', width: '100%', height: '100%' }}>
             <img
-                src={planImage}
+                src={planSrc}
                 style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                 alt="floor plan"
             />
 
-            {/* <svg
-                style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    pointerEvents: 'none',
-                }}
-            >
-                {hotspots.map((h) => (
-                    <path
-                        key={h.id}
-                        d={h.svgPath}
-                        fill="none"
-                        stroke={h.id === active ? 'red' : 'transparent'}
-                        strokeWidth={3}
-                    />
-                ))}
-            </svg> */}
         </div>
     );
 };
