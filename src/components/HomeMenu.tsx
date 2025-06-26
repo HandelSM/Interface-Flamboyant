@@ -15,6 +15,7 @@ export const HomeMenu: FC = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 padding: '0 6vw',
+                transform: 'translateX(-90px)'
             }}
         >
             <div style={{ display: 'flex', gap: 20 }}>
