@@ -18,7 +18,7 @@ export const SectionButton: FC<Props> = ({ label, onClick }) => (
         }}
     >
         <img
-            src="/assets/Imagens Finais/logo.png"
+            src="/assets/logo.png"
             alt=""
             style= {{
                 width: `calc(200px * var(--ui-scale))`,

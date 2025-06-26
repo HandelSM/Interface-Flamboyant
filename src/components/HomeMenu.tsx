@@ -14,9 +14,10 @@ export const HomeMenu: FC = () => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
+                padding: '0 6vw',
             }}
         >
-            <div style={{ display: 'flex', gap: 160 }}>
+            <div style={{ display: 'flex', gap: 20 }}>
                 {[
                     { label: 'LEGÍTIMO', id: 'Legitimo' },
                     { label: 'AUTÊNTICO', id: 'Autentico' },
