@@ -490,12 +490,12 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                             id: 'Ergonomia',
                             svgPath: 'M50 10 L60 10 L60 20 L50 20 Z',
                             media:
-                                '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-1pavimento-wellnes-lazer-exclusivo-autentico_1/pilates_1/c18_24_wellness_pilates_ts_ef_c_1.jpg'
+                                '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-30pavimento-lazer-exclusivo-autentico_1/c18_19_academia_01_ts_ef_c_1.jpg'
                         },
                         {
                             id: 'Musculação',
                             svgPath: 'M50 30 L60 30 L60 40 L50 40 Z',
-                            media: '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-1pavimento-wellnes-lazer-exclusivo-autentico_1/sala_de_massagem/c18_21_sala_massagem_ts_ef2_c_1.jpg'
+                            media: '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-30pavimento-lazer-exclusivo-autentico_1/c18_20_academia_02_ts_ef_c_1.jpg'
                         }
                     ],
                     arrows: { down: 'Lazer Exclusivo', up: '31' },

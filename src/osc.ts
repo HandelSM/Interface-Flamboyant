@@ -1,21 +1,14 @@
-import OSC from 'osc-js';
-import { useNavigationStore } from './store/navigation';
-import { useEffect } from 'react';
-import { CONTENT } from './content';
+import OSC from 'osc-js'
 
-const osc = new OSC({ plugin: new OSC.DatagramPlugin() });
-osc.open({ host: '192.168.1.100', port: 9000 }); // IP do TouchDesigner
+/* WebSocket client → servidor na porta 8080 */
+const osc = new OSC({
+  plugin: new OSC.WebsocketClientPlugin()
+})
+osc.open({ host: 'localhost', port: 8080 })
 
-export const useOscBridge = () => {
-  const { section, category, floor, hotspot } = useNavigationStore();
-  useEffect(() => {
-    if (!section || !category || !floor || !hotspot) return;
-    const index =
-      CONTENT[section]
-        .find((c) => c.id === category)!
-        .floors.find((f) => f.id === floor)!
-        .hotspots.find((h) => h.id === hotspot)!.oscIndex;
-
-    osc.send(new OSC.Message('/index', index));
-  }, [section, category, floor, hotspot]);
-};
+/* envia /panel/state <int32> */
+export const sendOscState = (value: number) => {
+  const msg = new OSC.Message('/panel/state')
+  msg.add(value, 'i')
+  osc.send(msg)
+}
