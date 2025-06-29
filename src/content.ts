@@ -219,6 +219,12 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                             media:
                                 '/assets/imagens_finais/legitimo_1/areas-comuns-exclusivas-legitimo/wellness-mezanino-2-pavimento-lazer_1/espaco_beauty_c.jpg',
                         },
+                        {
+                            id: 'Yoga e Pilates Solo',
+                            svgPath: 'M50 90 L60 90 L60 100 L50 100 Z',
+                            media:
+                                '/assets/imagens_finais/legitimo_1/areas-comuns-exclusivas-legitimo/wellness-mezanino-2-pavimento-lazer_1/yoga_e_pilates_solo_c.jpg',
+                        },
                     ],
                     arrows: { down: 'Lazer Exclusivo', up: '33' },
                 },
