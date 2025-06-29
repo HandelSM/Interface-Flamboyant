@@ -20,7 +20,7 @@ html, body, #root {
   margin: 0;
   overflow: hidden;                /* nunca scrolla */
   background: #ffffff;
-  color: #5a1e1b;
+  color: #730202;
   font-family: 'Utile', sans-serif;
   font-weight: 300;                /* Light como default */
   -webkit-font-smoothing: antialiased;
@@ -30,8 +30,8 @@ html, body, #root {
   --ui-scale: 2;          /* 1.0 = 100 %; ajuste livremente */
   --ui-scale-floor: 3;
   --space: calc(24px * var(--ui-scale));
-  --font-big: calc(36px * var(--ui-scale));
-  --font-med: calc(26px * var(--ui-scale));
+  --font-big: calc(20px * var(--ui-scale));
+  --font-med: calc(24px * var(--ui-scale));
   --font-small: calc(18px * var(--ui-scale));
 }
 

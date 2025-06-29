@@ -1,10 +1,10 @@
 import { FC } from 'react';
 
 interface Props {
-    category: string;
+    title: string;
 }
 
-export const FloorHeader: FC<Props> = ({ category }) => (
+export const FloorHeader: FC<Props> = ({ title }) => (
     <div
         style={{
             width: '100%',
@@ -17,7 +17,7 @@ export const FloorHeader: FC<Props> = ({ category }) => (
             zIndex: 9
         }}
     >
-        {category}
+        {title}
         <div
             style={{
                 position: 'absolute',
