@@ -480,7 +480,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                 {
                     id: 'Lazer Exclusivo',
                     title: 'Áreas Comuns – Exclusivo Autêntico',
-                    planImage: '/assets/imagens_finais/autentico_1/area-comum-lazer-comum_1/areas-comuns-1pavimento_1/planta_1pavimento_c.jpg',
+                    planImage: '/assets/imagens_finais/autentico_1/area-comum-lazer-comum_1/areas-comuns-1pavimento_1/planta_1pavimento_e.jpg',
                     hotspots: [
                         {
                             id: 'Salão de Festas Gourmet',
