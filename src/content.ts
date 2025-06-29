@@ -29,6 +29,25 @@ export const CONTENT: Record<string, CategorySpec[]> = {
             id: 'Subsolos',
             floors: [
                 {
+                    id: 'Térreo',
+                    planImage: '/assets/imagens_finais/legitimo_1/subsolos_1/terreo/planta_terreo_c.jpg',
+                    hotspots: [
+                        {
+                            id: 'Garagem',
+                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
+                            media:
+                                '/assets/imagens_finais/legitimo_1/subsolos_1/ss1_1/imagem_garagem_c.jpg',
+                        },
+                        {
+                            id: 'Bicicletário',
+                            svgPath: 'M20 200 L100 200 L100 260 L20 260 Z',
+                            media:
+                                '/assets/imagens_finais/legitimo_1/subsolos_1/terreo/bicicletario_c.jpg'
+                        },
+                    ],
+                    arrows: { down: 'SS1' },
+                },
+                {
                     id: 'SS3',
                     planImage:
                         '/assets/imagens_finais/legitimo_1/subsolos_1/ss3_1/planta_ss3_c.jpg',
@@ -89,27 +108,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                         },
                     ],
                     arrows: { up: 'Térreo', down: 'SS2' },
-                },
-
-                {
-                    id: 'Térreo',
-                    planImage: '/assets/imagens_finais/legitimo_1/subsolos_1/terreo/planta_terreo_c.jpg',
-                    hotspots: [
-                        {
-                            id: 'Garagem',
-                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
-                            media:
-                                '/assets/imagens_finais/legitimo_1/subsolos_1/ss1_1/imagem_garagem_c.jpg',
-                        },
-                        {
-                            id: 'Bicicletário',
-                            svgPath: 'M20 200 L100 200 L100 260 L20 260 Z',
-                            media:
-                                '/assets/imagens_finais/legitimo_1/subsolos_1/terreo/bicicletario_c.jpg'
-                        },
-                    ],
-                    arrows: { down: 'SS1' },
-                },
+                }
             ],
         },
 
@@ -331,6 +330,25 @@ export const CONTENT: Record<string, CategorySpec[]> = {
             id: 'Subsolos',
             floors: [
                 {
+                    id: 'Térreo',
+                    planImage: '/assets/imagens_finais/autentico_1/subsolos_1/terreo_1/planta_terreo_c.jpg',
+                    hotspots: [
+                        {
+                            id: 'Garagem',
+                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
+                            media:
+                                '/assets/imagens_finais/autentico_1/subsolos_1/ss1_1/imagem_garagem_c.jpg',
+                        },
+                        {
+                            id: 'Bicicletário',
+                            svgPath: 'M20 200 L100 200 L100 260 L20 260 Z',
+                            media:
+                                '/assets/imagens_finais/autentico_1/subsolos_1/terreo_1/bicicletario_c.jpg'
+                        },
+                    ],
+                    arrows: { down: 'SS1' },
+                },
+                {
                     id: 'SS3',
                     planImage:
                         '/assets/imagens_finais/autentico_1/subsolos_1/ss3_1/planta_ss3_c.jpg',
@@ -390,27 +408,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                         },
                     ],
                     arrows: { up: 'Térreo', down: 'SS2' },
-                },
-
-                {
-                    id: 'Térreo',
-                    planImage: '/assets/imagens_finais/autentico_1/subsolos_1/terreo_1/planta_terreo_c.jpg',
-                    hotspots: [
-                        {
-                            id: 'Garagem',
-                            svgPath: 'M60 90 L170 90 L170 130 L60 130 Z',
-                            media:
-                                '/assets/imagens_finais/autentico_1/subsolos_1/ss1_1/imagem_garagem_c.jpg',
-                        },
-                        {
-                            id: 'Bicicletário',
-                            svgPath: 'M20 200 L100 200 L100 260 L20 260 Z',
-                            media:
-                                '/assets/imagens_finais/autentico_1/subsolos_1/terreo_1/bicicletario_c.jpg'
-                        },
-                    ],
-                    arrows: { down: 'SS1' },
-                },
+                }
             ],
         },
 
@@ -493,7 +491,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                         '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-30pavimento-lazer-exclusivo-autentico_1/planta_30o_pavimento_-_academia/c18_pb_08__pavimento_lazer_30_ts_ef2_c.jpg',
                     hotspots: [
                         {
-                            id: 'Ergonomia',
+                            id: 'Ergonometria',
                             svgPath: 'M50 10 L60 10 L60 20 L50 20 Z',
                             media:
                                 '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-30pavimento-lazer-exclusivo-autentico_1/c18_19_academia_01_ts_ef_c_1.jpg'
