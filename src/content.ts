@@ -134,7 +134,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                             id: 'Churrasqueira',
                             svgPath: 'M10 30 L20 30 L20 40 L10 40 Z',
                             media:
-                                '/assets/imagens_finais/legitimo_1/areas-comuns-lazer-comum_1/churrasqueira_c_1.jpg',
+                                '/assets/imagens_finais/legitimo_1/areas-comuns-lazer-comum_1/churrasqueira_c_1.jpeg',
                         },
                         {
                             id: 'Playground',
@@ -243,7 +243,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                         {
                             id: 'Academia',
                             svgPath: 'M50 90 L60 90 L60 100 L50 100 Z',
-                            media: '/assets/imagens_finais/legitimo_1/areas-comuns-exclusivas-legitimo/academia-34-pavimento_1/academia_c_1.jpg'
+                            media: '/assets/imagens_finais/legitimo_1/areas-comuns-exclusivas-legitimo/academia-34-pavimento_1/academia_c_1.jpeg'
                         },
                     ],
                     arrows: { down: '33'}
@@ -262,7 +262,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                         {
                             id: 'Varanda',
                             svgPath: 'M10 10 L20 10 L20 20 L10 20 Z',
-                            media: '/assets/imagens_finais/legitimo_1/apartamento_1/varanda_c_1.jpg',
+                            media: '/assets/imagens_finais/legitimo_1/apartamento_1/varanda_c_1.jpeg',
                         },
                         {
                             id: 'Living',
@@ -429,7 +429,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                             id: 'Churrasqueira',
                             svgPath: 'M10 30 L20 30 L20 40 L10 40 Z',
                             media:
-                                '/assets/imagens_finais/autentico_1/area-comum-lazer-comum_1/areas-comuns-1pavimento_1/churrasqueira_c_1.jpg',
+                                '/assets/imagens_finais/autentico_1/area-comum-lazer-comum_1/areas-comuns-1pavimento_1/churrasqueira_c_1.jpeg',
                         },
                         {
                             id: 'Playground',
@@ -465,12 +465,12 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                         {
                             id: 'Salão de Festas',
                             svgPath: 'M30 10 L40 10 L40 20 L30 20 Z',
-                            media: '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-1pavimento-lazer-exclusivo-autentico_1/salao_de_festas/c18_16_salao_festas_ts_ef_c_1.jpg',
+                            media: '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-1pavimento-lazer-exclusivo-autentico_1/salao_de_festas/c18_16_salao_festas_ts_ef_c_1.jpeg',
                         },
                         {
                             id: 'Brinquedoteca',
                             svgPath: 'M30 30 L40 30 L40 40 L30 40 Z',
-                            media: '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-1pavimento-lazer-exclusivo-autentico_1/brinquedoteca_1/c18_18_brinquedoteca_ts_ef_c_1.jpg'
+                            media: '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-1pavimento-lazer-exclusivo-autentico_1/brinquedoteca_1/c18_18_brinquedoteca_ts_ef_c_1.jpeg'
                         },
                         {
                             id: 'Piscina Adulto',
@@ -508,7 +508,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                         {
                             id: 'Sauna Seca',
                             svgPath: 'M50 90 L60 90 L60 100 L50 100 Z',
-                            media: '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-1pavimento-wellnes-lazer-exclusivo-autentico_1/sauna_seca/c18_23_sauna_ts_ef_c_1.jpg'
+                            media: '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-1pavimento-wellnes-lazer-exclusivo-autentico_1/sauna_seca/c18_23_sauna_ts_ef_c_1.jpeg'
                         },
                         {
                             id: 'Sala de Massagem',
@@ -592,7 +592,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                         {
                             id: 'Varanda',
                             svgPath: 'M10 10 L20 10 L20 20 L10 20 Z',
-                            media: '/assets/imagens_finais/autentico_1/apartamentos_1/apartamento306m_1/varanda_c_1.jpg',
+                            media: '/assets/imagens_finais/autentico_1/apartamentos_1/apartamento306m_1/varanda_c_1.jpeg',
                         },
                     ],
                     arrows: { left: '274 m²', right: '306 m²' },
