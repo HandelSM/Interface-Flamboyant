@@ -9,6 +9,7 @@ export interface HotspotSpec {
 
 export interface FloorSpec {
     id: string;
+    title?: string;
     planImage: string;
     hotspots: HotspotSpec[];
     arrows: { up?: string; right?: string; down?: string; left?: string };
@@ -30,6 +31,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
             floors: [
                 {
                     id: 'Térreo',
+                    title: 'Térreo',
                     planImage: '/assets/imagens_finais/legitimo_1/subsolos_1/terreo/planta_terreo_c.jpg',
                     hotspots: [
                         {
@@ -49,6 +51,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                 },
                 {
                     id: 'SS3',
+                    title: 'Subsolos',
                     planImage:
                         '/assets/imagens_finais/legitimo_1/subsolos_1/ss3_1/planta_ss3_c.jpg',
                     hotspots: [
@@ -64,6 +67,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
 
                 {
                     id: 'SS2',
+                    title: 'Subsolos',
                     planImage:
                         '/assets/imagens_finais/legitimo_1/subsolos_1/ss2_1/c18_pb_02_pavimento_garagem_ss2_ef_c.jpg',
                     hotspots: [
@@ -79,6 +83,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
 
                 {
                     id: 'SS1',
+                    title: 'Subsolos',
                     planImage:
                         '/assets/imagens_finais/legitimo_1/subsolos_1/ss1_1/ss1.jpg',
                     hotspots: [
@@ -120,6 +125,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
             floors: [
                 {
                     id: 'Lazer Comum',
+                    title: 'Áreas Comuns',
                     planImage:
                         '/assets/imagens_finais/legitimo_1/areas-comuns-lazer-comum_1/planta_1pavimento_c.jpg',
                     hotspots: [
@@ -159,6 +165,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
 
                 {
                     id: 'Lazer Exclusivo',
+                    title: 'Áreas Comuns – Exclusivo Legítimo',
                     planImage:
                         '/assets/imagens_finais/legitimo_1/areas-comuns-exclusivas-legitimo/1pavimento-lazer/pavimento_lazer_-_1o_pavimento_c.jpg',
                     hotspots: [
@@ -185,6 +192,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
 
                 {
                     id: '2',
+                    title: 'Áreas Comuns – Exclusivo Legítimo - Wellness',
                     planImage:
                         '/assets/imagens_finais/legitimo_1/areas-comuns-exclusivas-legitimo/wellness-mezanino-2-pavimento-lazer_1/planta_wellness.jpg',
                     hotspots: [
@@ -230,6 +238,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
 
                 {
                     id: '33',
+                    title: 'Áreas Comuns – Exclusivo Legítimo – Salão de Festas',
                     planImage: '/assets/imagens_finais/legitimo_1/areas-comuns-exclusivas-legitimo/salao-de-festas-33-pavimento_1/planta_-_33pavimento.jpg',
                     hotspots: [
                         {
@@ -243,6 +252,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
 
                 {
                     id: '34',
+                    title: 'Áreas Comuns – Exclusivo Legítimo – Academia Assinatura Technogym',
                     planImage: '/assets/imagens_finais/legitimo_1/areas-comuns-exclusivas-legitimo/academia-34-pavimento_1/academia_34o_pavimento_c.jpg',
                     hotspots: [
                         {
@@ -262,6 +272,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
             [
                 {
                     id: '420 m²',
+                    title: 'Apartamento - Opção 3 suítes e gourmet integrado - 420m²',
                     planImage: '/assets/imagens_finais/legitimo_1/apartamento_1/plantas_1/apartamento_420mop_3_suites.jpg',
                     hotspots: [
                         {
@@ -289,30 +300,35 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                 },
                 {
                     id: '420 m²',
+                    title: 'Apartamento Padrão – 4 suítes e gourmet integrado - 420m²',
                     planImage: '/assets/imagens_finais/legitimo_1/apartamento_1/plantas_1/apartamento_tipo_-_4_suites_-_420m2_c.jpg',
                     hotspots: [],
                     arrows: { left: '420 m²', right: '420 m²'},
                 },
                 {
                     id: '420 m²',
+                    title: 'Apartamento - Opção 4 suítes e cozinha fechada - 420m²',
                     planImage: '/assets/imagens_finais/legitimo_1/apartamento_1/plantas_1/apartamento_4202-_opcao_cozinha_fechada_c.jpg',
                     hotspots: [],
                     arrows: { left: '420 m²', right: '461 m²' },
                 },
                 {
                     id: '461 m²',
+                    title: 'Apartamento Tipo House - 4 suítes e gourmet integrado - 461m²',
                     planImage: '/assets/imagens_finais/legitimo_1/apartamento_1/plantas_1/apartamento_tipo_house_-_4_suites_-_461m2_c.jpg',
                     hotspots: [],
                     arrows: { left: '420 m²', right: '872 m²' },
                 },
                 {
                     id: '872 m²',
+                    title: 'Apartamento Duplex Inferior - 5 suítes - 872m²',
                     planImage: '/assets/imagens_finais/legitimo_1/apartamento_1/plantas_1/duplex_inferior_c.jpg',
                     hotspots: [],
                     arrows: { left: '461 m²', right: '872 m²' },
                 },
                 {
                     id: '872 m²',
+                    title: 'Apartamento Duplex Superior - 5 suítes - 872m²',
                     planImage: '/assets/imagens_finais/legitimo_1/apartamento_1/plantas_1/duplex_superior_c.jpg',
                     hotspots: [],
                     arrows: { left: '872 m²' },
@@ -350,6 +366,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                 },
                 {
                     id: 'SS3',
+                    title: 'Subsolos',
                     planImage:
                         '/assets/imagens_finais/autentico_1/subsolos_1/ss3_1/planta_ss3_c.jpg',
                     hotspots: [
@@ -365,6 +382,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
 
                 {
                     id: 'SS2',
+                    title: 'Subsolos',
                     planImage:
                         '/assets/imagens_finais/autentico_1/subsolos_1/ss2_1/c18_pb_02_pavimento_garagem_ss2_ef_c_1.jpg',
                     hotspots: [
@@ -380,6 +398,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
 
                 {
                     id: 'SS1',
+                    title: 'Subsolos',
                     planImage:
                         '/assets/imagens_finais/autentico_1/subsolos_1/ss1_1/ss1.jpg',
                     hotspots: [
@@ -420,6 +439,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
             floors: [
                 {
                     id: 'Lazer Comum',
+                    title: 'Áreas Comuns',
                     planImage:
                         '/assets/imagens_finais/autentico_1/area-comum-lazer-comum_1/areas-comuns-1pavimento_1/planta_1pavimento_c.jpg',
                     hotspots: [
@@ -459,6 +479,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
 
                 {
                     id: 'Lazer Exclusivo',
+                    title: 'Áreas Comuns – Exclusivo Autêntico',
                     planImage: '/assets/imagens_finais/autentico_1/area-comum-lazer-comum_1/areas-comuns-1pavimento_1/planta_1pavimento_c.jpg',
                     hotspots: [
                         {
@@ -487,6 +508,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
 
                 {
                     id: '30',
+                    title: 'Áreas Comuns – Exclusivo Autêntico – Academia Assinatura Technogym',
                     planImage:
                         '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-30pavimento-lazer-exclusivo-autentico_1/planta_30o_pavimento_-_academia/c18_pb_08__pavimento_lazer_30_ts_ef2_c.jpg',
                     hotspots: [
@@ -507,6 +529,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
 
                 {
                     id: '31',
+                    title: 'Áreas Comuns – Exclusivo Autêntico - Wellness',
                     planImage: '/assets/imagens_finais/autentico_1/areas-comuns-exclusivas-autentico_1/lazer-1pavimento-wellnes-lazer-exclusivo-autentico_1/planta_31pavimento_-_wellness/planta_31pavimento_-_wellness.jpg',
                     hotspots: [
                         {
@@ -551,6 +574,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
             [
                 {
                     id: '250 m²',
+                    title: 'Apartamento - Opção 3 suítes e gourmet integrado - 250m²',
                     planImage: '/assets/imagens_finais/autentico_1/apartamentos_1/apartamento250m_1/plantas_apartamento_250m/opcao_3_suites/apartamento_250m2_-_final_01_-_opcao_3_suites_c.jpg',
                     hotspots: [
                         {
@@ -568,18 +592,21 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                 },
                 {
                     id: '250 m²',
+                    title: 'Apartamento Padrão – 4 suítes e gourmet integrado - 250m²',
                     planImage: '/assets/imagens_finais/autentico_1/apartamentos_1/apartamento250m_1/plantas_apartamento_250m/apartamento_tipo_-_4_suites/apartamento_tipo_-_4_suites_-_250m2_c.jpg',
                     hotspots: [],
                     arrows: { left: '250 m²', right: '274 m²'},
                 },
                 {
                     id: '274 m²',
+                    title: 'Apartamento Tipo House - 4 suítes e gourmet integrado - 274m²',
                     planImage: 'public/assets/imagens_finais/autentico_1/apartamentos_1/apartamento-tipo-house-4suites-274m_1/convertidos_1/c18_pb_20_tipo_house_sul_250m2_4suites_ef_c.jpg',
                     hotspots: [],
                     arrows: { left: '250 m²', right: '306 m²'},
                 },
                 {
                     id: '306 m²',
+                    title: 'Apartamento - Opção 3 suítes e gourmet integrado - 306m²',
                     planImage: '/assets/imagens_finais/autentico_1/apartamentos_1/apartamento306m_1/plantas_1/apartamento_306m-_final_02_-_op03_suites.jpg',
                     hotspots: [
                         {
@@ -603,36 +630,42 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                 },
                 {
                     id: '306 m²',
+                    title: 'Apartamento Padrão – 4 suítes e gourmet integrado - 306m²',
                     planImage: '/assets/imagens_finais/autentico_1/apartamentos_1/apartamento306m_1/plantas_1/apartamento_tipo_-_final_02_-_4_suites_-_306m2/apartamento_tipo_-_final_02_-_4_suites_-_306m2_c.jpg',
                     hotspots: [],
                     arrows: { left: '306 m²', right: '330 m²' },
                 },
                 {
                     id: '330 m²',
+                    title: 'Apartamento Tipo House - 4 suítes e gourmet integrado - 330m²',
                     planImage: '/assets/imagens_finais/autentico_1/apartamentos_1/apartamento-tipo-house-4suites-330m_1/convertido_1/apartamento_tipo_house_-_4_suites_-_final_02-_33022m2_c.jpg',
                     hotspots: [],
                     arrows: { left: '306 m²', right: '530 m²' },
                 },
                 {
                     id: '530 m²',
+                    title: 'Apartamento Duplex Inferior - 5 suítes - 530m²',
                     planImage: '/assets/imagens_finais/autentico_1/apartamentos_1/duplex-530m_1/convertido_1/pavimento_inferior_530m2_c.jpg',
                     hotspots: [],
                     arrows: { left: '330 m²', right: '530 m²' },
                 },
                 {
                     id: '530 m²',
+                    title: 'Apartamento Duplex Superior - 5 suítes - 530m²',
                     planImage: '/assets/imagens_finais/autentico_1/apartamentos_1/duplex-530m_1/convertido_1/pavimento_superior_530m2_c.jpg',
                     hotspots: [],
                     arrows: { left: '530 m²', right: '649 m²'  },
                 },
                 {
                     id: '649 m²',
+                    title: 'Apartamento Duplex Inferior - 5 suítes - 649m²',
                     planImage: '/assets/imagens_finais/autentico_1/apartamentos_1/duplex-649m_1/convertido_1/pavimento_inferior_649m2_c.jpg',
                     hotspots: [],
                     arrows: { left: '530 m²', right: '649 m²' },
                 },
                 {
                     id: '649 m²',
+                    title: 'Apartamento Duplex Superior - 5 suítes - 649m²',
                     planImage: '/assets/imagens_finais/autentico_1/apartamentos_1/duplex-649m_1/convertido_1/pavimento_superior_649m2_c.jpg',
                     hotspots: [],
                     arrows: { left: '649 m²' },
@@ -648,6 +681,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
             floors: [
                 {
                     id: 'Lazer Le Club Lacoste',
+                    title: 'Le Club Lacoste',
                     planImage: '/assets/imagens_finais/le-club-lacoste_1/planta_1pavimento_c.jpg',
                     hotspots:
                     [

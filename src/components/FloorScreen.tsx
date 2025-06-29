@@ -37,7 +37,7 @@ export const FloorScreen: FC<Props> = ({ category, floor }) => {
                 background: '#fff',
             }}
         >
-            <FloorHeader category={category} /> {/* header volta */}
+            <FloorHeader title={floor.title ?? floor.id} /> {/* header volta */}
 
             {/* grid */}
             <div
