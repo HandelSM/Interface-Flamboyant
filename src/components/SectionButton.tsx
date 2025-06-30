@@ -3,9 +3,10 @@ import { FC } from 'react';
 interface Props {
     label: string;
     onClick: () => void;
+    styleOverride?: React.CSSProperties
 }
 
-export const SectionButton: FC<Props> = ({ label, onClick }) => (
+export const SectionButton: FC<Props> = ({ label, onClick, styleOverride = {} }) => (
     <button
         onClick={onClick}
         style={{
@@ -15,6 +16,7 @@ export const SectionButton: FC<Props> = ({ label, onClick }) => (
             background: 'transparent',
             border: 'none',
             cursor: 'pointer',
+            ...styleOverride
         }}
     >
         <img

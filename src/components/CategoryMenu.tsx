@@ -28,7 +28,7 @@ export const CategoryMenu: FC<Props> = ({ sectionId, categories, onBack }) => {
             {/* botão voltar canto inferior‑direito */}
             <BackButton onClick={onBack} />
 
-            <div style={{ display: 'flex', gap: 160 }}>
+            <div style={{ display: 'flex', gap: 40 }}>
                 {categories.map((cat) => (
                     <SectionButton
                         key={cat.id}
