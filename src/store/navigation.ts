@@ -31,8 +31,12 @@ export const useNavigationStore = create<NavigationState>((set) => ({
 
     setNav: (patch) =>
     set((state) => {
-        const next = { ...state, ...patch }
-        channel.postMessage(toPayload(next))   // sincroniza abas
+        const next = 
+        { 
+            ...state,
+            ...patch,
+        }
+        channel.postMessage(toPayload(next))
         return next
     }),
 }))

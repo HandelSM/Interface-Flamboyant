@@ -11,6 +11,7 @@ export interface FloorSpec {
     id: string;
     title?: string;
     planImage: string;
+    media?: string;
     hotspots: HotspotSpec[];
     arrows: { up?: string; right?: string; down?: string; left?: string };
 }
@@ -335,6 +336,26 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                 },
             ],
         },
+        {
+            id: 'Fachada',
+            floors: 
+            [
+                {
+                    id: 'Imagem',
+                    planImage: '',
+                    media: '/assets/imagens_finais/legitimo_1/legitimo_fachada.jpg',
+                    hotspots: [],
+                    arrows: {}
+                },
+                {
+                    id: 'Video',
+                    planImage: '',
+                    media: '/assets/imagens_finais/legitimo_1/legitimo_video.mp4',
+                    hotspots: [],
+                    arrows: {}
+                }
+            ]
+        }
     ],
 
     Autentico: 
@@ -674,6 +695,26 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                 
             ],
         },
+        {
+            id: 'Fachada',
+            floors: 
+            [
+                {
+                    id: 'Imagem',
+                    planImage: '',
+                    media: '/assets/imagens_finais/autentico_1/autentico_fachada.jpg',
+                    hotspots: [],
+                    arrows: {}
+                },
+                {
+                    id: 'Video',
+                    planImage: '',
+                    media: '/assets/imagens_finais/autentico_1/autentico_video.mp4',
+                    hotspots: [],
+                    arrows: {}
+                }
+            ]
+        }
     ],
     LeClubLacoste: [
         {
@@ -705,6 +746,5 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                 },
             ],
         },
-    ],
-    Fachada: []
+    ]
 };

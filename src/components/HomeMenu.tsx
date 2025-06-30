@@ -18,12 +18,11 @@ export const HomeMenu: FC = () => {
                 transform: 'translateX(-90px)'
             }}
         >
-            <div style={{ display: 'flex', gap: 20 }}>
+            <div style={{ display: 'flex', gap: 60 }}>
                 {[
                     { label: 'LEGÍTIMO', id: 'Legitimo' },
                     { label: 'AUTÊNTICO', id: 'Autentico' },
                     { label: 'LE CLUB LACOSTE', id: 'LeClubLacoste' },
-                    { label: 'FACHADA', id: 'Fachada' },
                 ].map((sec) => (
                     <SectionButton
                         key={sec.id}

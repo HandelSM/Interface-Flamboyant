@@ -5,6 +5,7 @@ import { HomeMenu } from '../components/HomeMenu';
 import { CategoryMenu } from '../components/CategoryMenu';
 import { FloorPlan } from '../components/FloorPlan';
 import { FloorScreen } from '../components/FloorScreen';
+import { FachadaMenu } from '../components/FachadaMenu'
 
 /* ---- PLACEHOLDERS só para compilar ---- */
 const Menu: FC<{ items: string[]; onSelect: (s: string) => void; onBack?: () => void }> =
@@ -73,6 +74,15 @@ export const Tablet: FC = () => {
 
     /* --------- NÍVEL 3 – exibição de floor + setas -------- */
     const cat = cats.find((c) => c.id === category)!;
+
+    if (cat.id === 'Fachada')
+        return (
+            <FachadaMenu
+            floors={cat.floors}
+            onBack={() => setNav({ category:null, floor:null })}
+            />
+        )
+
     const floorData = cat.floors.find((f) => f.id === floor)!;
 
     return (
