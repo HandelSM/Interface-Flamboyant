@@ -45,12 +45,12 @@ export const Tela: FC = () => {
       autoPlay
       muted
       loop
-      style={{ width:'100%', height:'100%', objectFit:'cover' }}
+      style={{ width:'100%', height:'100%', objectFit:'contain', background:'#730202' }}
     />
   ) : (
     <img
       src={mediaSrc}
-      style={{ width:'100%', height:'100%', objectFit:'cover' }}
+      style={{ width:'100%', height:'100%', objectFit:'contain', background:'#730202' }}
     />
   )
 }

@@ -18,7 +18,7 @@ const ArrowBtn: FC<{ symbol: string; size: number; onClick: () => void }> = ({
       background: 'transparent',
       fontSize: size,
       lineHeight: 1,
-      color: '#5a1e1b',
+      color: '#730202',
       cursor: 'pointer',
     }}
   >
@@ -41,10 +41,11 @@ export const ArrowRail: FC<Props> = ({ arrows, floorId }) => {
         alignItems: 'center',     // centra setas verticais na linha
         justifyContent: 'center',
         gap: 16,
-        paddingLeft: 32,          // respiro em relação à planta
+        // paddingLeft: 32,          // respiro em relação à planta
+        paddingRight:32,
         position: 'relative',
         zIndex: 2,
-        color: '#5a1e1b',
+        color: '#730202',
       }}
     >
       {arrows.up && (

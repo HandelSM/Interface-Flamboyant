@@ -34,7 +34,7 @@ export const SectionButton: FC<Props> = ({ label, onClick, styleOverride = {} })
                 marginTop: 'calc(8px * var(--ui-scale))',
                 fontSize: 'var(--font-med)',
                 letterSpacing: 1,
-                color: '#5a1e1b',
+                color: '#730202',
             }}
         >
             {label}

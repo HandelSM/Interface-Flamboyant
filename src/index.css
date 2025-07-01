@@ -31,7 +31,7 @@ html, body, #root {
   --ui-scale-floor: 3;
   --space: calc(24px * var(--ui-scale));
   --font-big: calc(20px * var(--ui-scale));
-  --font-med: calc(24px * var(--ui-scale));
+  --font-med: calc(20px * var(--ui-scale));
   --font-small: calc(18px * var(--ui-scale));
 }
 

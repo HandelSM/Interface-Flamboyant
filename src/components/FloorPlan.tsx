@@ -20,10 +20,10 @@ export const FloorPlan: FC<Props> = ({ planImage, hotspots }) => {
     })();
 
     return (
-        <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+        <div style={{ position: 'relative', overflow:'hidden', width: '100%', height: '100%', maxHeight:'100%' }}>
             <img
                 src={planSrc}
-                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                style={{ width: '100%', height: 'auto', maxHeight:'100%', objectFit: 'contain' }}
                 alt="floor plan"
             />
 

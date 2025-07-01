@@ -12,7 +12,7 @@ export const FloorHeader: FC<Props> = ({ title }) => (
             left: 'calc(35px * var(--ui-scale))',
             fontFamily: 'Utile, sans-serif',
             fontSize: 'var(--font-big)',
-            color: '#5a1e1b',
+            color: '#730202',
             position: 'relative',
             zIndex: 9
         }}
@@ -25,7 +25,7 @@ export const FloorHeader: FC<Props> = ({ title }) => (
                 left: 'calc(-20px * var(--ui-scale))',
                 right: 'calc(100px * var(--ui-scale))',
                 height: 2,
-                background: '#5a1e1b',
+                background: '#730202',
             }}
         />
     </div>

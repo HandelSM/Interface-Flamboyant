@@ -25,7 +25,8 @@ export const HotspotList: FC<Props> = ({ hotspots }) => {
                     listStyle: 'none',
                     margin: 0,
                     padding: 0,
-                    width: 630,
+                    width:'max-content',
+                    whiteSpace:'nowrap'
                 }}
             >
                 {hotspots.map((h) => (
@@ -36,8 +37,9 @@ export const HotspotList: FC<Props> = ({ hotspots }) => {
                             marginBottom: 16,
                             cursor: 'pointer',
                             opacity: h.id === active ? 1 : 0.4,
-                            fontWeight: h.id === active ? 700 : 300,
-                            fontSize: 'var(--font-med)'
+                            fontWeight: h.id === active ? 500 : 300,
+                            fontSize: 'var(--font-med)',
+                            whiteSpace:'nowrap'
                         }}
                     >
                         {h.id}
@@ -47,4 +49,3 @@ export const HotspotList: FC<Props> = ({ hotspots }) => {
         </div>
     );    
 };
-
