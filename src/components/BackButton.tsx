@@ -17,7 +17,7 @@ export const BackButton: FC<Props> = ({ onClick, size = 50 }) => (
             background: 'transparent',
             fontSize: size,
             lineHeight: 1,
-            color: '#5a1e1b',
+            color: '#730202',
             cursor: 'pointer',
         }}
     >
