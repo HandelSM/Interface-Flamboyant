@@ -127,6 +127,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                 {
                     id: 'Lazer Comum',
                     title: 'Áreas Comuns',
+                    media: "/assets/imagens_finais/legitimo_1/areas-comuns-lazer-comum_1/espaco_pet__piscina_infantil__praca_das_aguas__playground_c.jpg",
                     planImage:
                         '/assets/imagens_finais/legitimo_1/areas-comuns-lazer-comum_1/planta_1pavimento_c.jpg',
                     hotspots: [
@@ -461,6 +462,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                 {
                     id: 'Lazer Comum',
                     title: 'Áreas Comuns',
+                    media: "/assets/imagens_finais/legitimo_1/areas-comuns-lazer-comum_1/espaco_pet__piscina_infantil__praca_das_aguas__playground_c.jpg",
                     planImage:
                         '/assets/imagens_finais/autentico_1/area-comum-lazer-comum_1/areas-comuns-1pavimento_1/planta_1pavimento_c.jpg',
                     hotspots: [
@@ -594,7 +596,7 @@ export const CONTENT: Record<string, CategorySpec[]> = {
             floors: 
             [
                 {
-                    id: '250 m²',
+                    id: 'Apartamento\nFinal 01\n250 m²',
                     title: 'Apartamento - Opção 3 suítes e gourmet integrado - 250m²',
                     planImage: '/assets/imagens_finais/autentico_1/apartamentos_1/apartamento250m_1/plantas_apartamento_250m/opcao_3_suites/apartamento_250m2_-_final_01_-_opcao_3_suites_c.jpg',
                     hotspots: [
@@ -609,24 +611,24 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                             media: '/assets/imagens_finais/autentico_1/apartamentos_1/apartamento250m_1/living_c_1.jpg',
                         }
                     ],
-                    arrows: { right: '250 m²' },
+                    arrows: { right: 'Apartamento \nFinal 01\n250 m²' },
                 },
                 {
-                    id: '250 m²',
+                    id: 'Apartamento \nFinal 01\n250 m²',
                     title: 'Apartamento Padrão – 4 suítes e gourmet integrado - 250m²',
                     planImage: '/assets/imagens_finais/autentico_1/apartamentos_1/apartamento250m_1/plantas_apartamento_250m/apartamento_tipo_-_4_suites/apartamento_tipo_-_4_suites_-_250m2_c.jpg',
                     hotspots: [],
-                    arrows: { left: '250 m²', right: '274 m²'},
+                    arrows: { left: 'Apartamento\nFinal 01\n250 m²', right: '274 m²'},
                 },
                 {
                     id: '274 m²',
                     title: 'Apartamento Tipo House - 4 suítes e gourmet integrado - 274m²',
                     planImage: 'public/assets/imagens_finais/autentico_1/apartamentos_1/apartamento-tipo-house-4suites-274m_1/convertidos_1/c18_pb_20_tipo_house_sul_250m2_4suites_ef_c.jpg',
                     hotspots: [],
-                    arrows: { left: '250 m²', right: '306 m²'},
+                    arrows: { left: 'Apartamento \nFinal 01\n250 m²', right: 'Apartamento\nFinal 02\n306 m²'},
                 },
                 {
-                    id: '306 m²',
+                    id: 'Apartamento\nFinal 02\n306 m²',
                     title: 'Apartamento - Opção 3 suítes e gourmet integrado - 306m²',
                     planImage: '/assets/imagens_finais/autentico_1/apartamentos_1/apartamento306m_1/plantas_1/apartamento_306m-_final_02_-_op03_suites.jpg',
                     hotspots: [
@@ -647,21 +649,21 @@ export const CONTENT: Record<string, CategorySpec[]> = {
                             media: '/assets/imagens_finais/autentico_1/apartamentos_1/apartamento306m_1/varanda_c_1.jpeg',
                         },
                     ],
-                    arrows: { left: '274 m²', right: '306 m²' },
+                    arrows: { left: '274 m²', right: 'Apartamento\nFinal 02 \n306 m²' },
                 },
                 {
-                    id: '306 m²',
+                    id: 'Apartamento\nFinal 02 \n306 m²',
                     title: 'Apartamento Padrão – 4 suítes e gourmet integrado - 306m²',
                     planImage: '/assets/imagens_finais/autentico_1/apartamentos_1/apartamento306m_1/plantas_1/apartamento_tipo_-_final_02_-_4_suites_-_306m2/apartamento_tipo_-_final_02_-_4_suites_-_306m2_c.jpg',
                     hotspots: [],
-                    arrows: { left: '306 m²', right: '330 m²' },
+                    arrows: { left: 'Apartamento\nFinal 02\n306 m²', right: '330 m²' },
                 },
                 {
                     id: '330 m²',
                     title: 'Apartamento Tipo House - 4 suítes e gourmet integrado - 330m²',
                     planImage: '/assets/imagens_finais/autentico_1/apartamentos_1/apartamento-tipo-house-4suites-330m_1/convertido_1/apartamento_tipo_house_-_4_suites_-_final_02-_33022m2_c.jpg',
                     hotspots: [],
-                    arrows: { left: '306 m²', right: '530 m²' },
+                    arrows: { left: 'Apartamento\nFinal 02 \n306 m²', right: '530 m²' },
                 },
                 {
                     id: '530 m²',

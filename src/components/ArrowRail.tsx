@@ -27,7 +27,36 @@ const ArrowBtn: FC<{ symbol: string; size: number; onClick: () => void }> = ({
 );
 
 export const ArrowRail: FC<Props> = ({ arrows, floorId }) => {
-  const { setNav } = useNavigationStore();
+  const { setNav, section } = useNavigationStore();
+
+  /* ───── CASO ESPECIAL ─ Le Club Lacoste ───── */
+  if (section === 'LeClubLacoste') {
+  return (
+    <div
+      style={{
+        position: 'relative',
+        width: 300,
+        height: '100%',
+        overflow: 'visible',
+      }}
+    >
+      <img
+        src="/assets/imagens_finais/le-club-lacoste_1/le_club_lacoste_2.jpg"
+        alt="Le Club Lacoste"
+        style={{
+          position: 'absolute',
+          right: 0,
+          top: '50%',
+          transform: 'translate(-120px, -50%)',
+          height: 400,
+          objectFit: 'contain',
+          pointerEvents: 'none'
+        }}
+      />
+    </div>
+  );
+}
+
 
   const vSize = 64 * 1.8; // ▲ ▼
   const hSize = 48 * 1.8; // ◀ ▶
@@ -65,7 +94,7 @@ export const ArrowRail: FC<Props> = ({ arrows, floorId }) => {
           />
         )}
 
-        <span style={{ fontSize: 'var(--font-med)', fontWeight: 700, whiteSpace: 'nowrap' }}>
+        <span style={{ fontSize: 'var(--font-med)', fontWeight: 700, whiteSpace: 'pre-line', textAlign: 'center' }}>
           {floorId}
         </span>
 
